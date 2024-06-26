@@ -7,3 +7,6 @@ a.extend(b)
 print(f"a.extend(b): {a}")
 # print(f"a+b: {a + b}")
 #print(f"a.concat(b): {a.concat(b)}")
+
+
+#Output: a.extend(b): ['a', 'b', 'c', 'd', 'e', 'x', 'y', 'z']
