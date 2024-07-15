@@ -5,7 +5,7 @@ class A:
 
 
 class B(A):
-    
+
     def __init__(self, j=2):
         super().__init__()
         self.j = j
@@ -14,5 +14,4 @@ class B(A):
         b = B()
         print(b.i, b.j)
 
-
-main()
+    main()
