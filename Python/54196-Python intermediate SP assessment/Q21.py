@@ -12,3 +12,7 @@ except:
 finally:
     print("Closing the file")
     fh.close()
+
+
+
+#Compilation Error
