@@ -1,11 +1,9 @@
 class A:
-
     def __init__(self, i=1):
         self.i = i
 
 
 class B(A):
-
     def __init__(self, j=2):
         super().__init__()
         self.j = j
@@ -14,4 +12,7 @@ class B(A):
         b = B()
         print(b.i, b.j)
 
-    main()
+
+B.main()
+
+#Output: 1 2
