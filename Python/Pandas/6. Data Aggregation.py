@@ -1,5 +1,5 @@
-#5.Welcome to Python Pandas | 6 | Data Aggregation(75 Min)
-#Data Aggregation - HandsonFile Name: prog.py
+# Welcome to Python Pandas | 6 | Data Aggregation(75 Min)
+# Data Aggregation - HandsonFile Name: prog.py
 
 #Write your code here
 
