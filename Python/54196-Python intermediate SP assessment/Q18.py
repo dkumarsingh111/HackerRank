@@ -7,5 +7,9 @@ class B(A):
     def __init__(self, param):
         self.b1=param
 
-        obj=B(100)
-        print("%d %d" % (obj.a1, obj.b1))
+
+
+obj=B(100)
+print("%d %d" % (obj.a1, obj.b1))
+
+#Output: Error is generated
