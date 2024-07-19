@@ -10,8 +10,7 @@ class B(A):
 
     def main():
         b = B(50)
-        print(b.i)
-        print(b.j)
+        print(b.i, b.j)
 
 
 B.main()
