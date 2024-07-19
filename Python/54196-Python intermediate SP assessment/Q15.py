@@ -6,3 +6,6 @@ class A:
     
 x=44
 print(a.x)
+
+
+#Output: Compile error
