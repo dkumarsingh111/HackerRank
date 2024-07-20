@@ -9,4 +9,3 @@ print(k)
         # h
         # l
         # l
-        # [None, None, None]
