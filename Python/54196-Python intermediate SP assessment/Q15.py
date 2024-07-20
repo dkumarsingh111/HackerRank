@@ -8,4 +8,4 @@ x=44
 print(a.x)
 
 
-#Output: Compile error
+#Output: 4
