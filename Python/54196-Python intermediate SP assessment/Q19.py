@@ -15,4 +15,4 @@ class B(A):
 
 B.main()
 
-#Output: 1 2
+#Output: 0 50
