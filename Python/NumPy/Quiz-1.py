@@ -6,3 +6,4 @@ x = np.arange(90).reshape(3, 15, 2)
 print(x)
 
 #Output: 15
+
