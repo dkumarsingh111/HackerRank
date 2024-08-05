@@ -36,8 +36,8 @@ def multi_curve_plot():
     arr_y3 = arr_x**3
 
     ax.plot(arr_x, arr_y1, color='green', marker='^', label='y=arr_x', linestyle='--')
-    ax.plot(arr_x, arr_y2, color='blue', marker='^', label='y=arr_x**2', linestyle='--')
-    ax.plot(arr_x, arr_y3, color='red', marker='^', label='y=arr_x**3', linestyle='--')
+    ax.plot(arr_x, arr_y2, color='blue', marker='s', label='y=arr_x**2', linestyle='--')
+    ax.plot(arr_x, arr_y3, color='red', marker='o', label='y=arr_x**3', ', linestyle='--')
     plt.legend()    
 
     return fig
@@ -57,7 +57,7 @@ def scatter_plot():
     arr_v = np.sin(2.5*np.pi*arr_t)
     months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
-    ax.plot(months, car_sales, color='green', marker='o', label='sin(arr_t)', linestyle='--')
+    ax.scatter(months, car_sales, color='green', marker='o', label='car sales')
     plt.legend()
     return fig
 
