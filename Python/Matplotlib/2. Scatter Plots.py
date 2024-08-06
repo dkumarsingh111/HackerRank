@@ -1,12 +1,5 @@
-#Welcome to Matplotlib -2 - Scatter Plots
-
-
-import matplotlib
-matplotlib.use('Agg')
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-import matplotlib.ticker as ticker
 
 
 
@@ -24,53 +17,52 @@ def sine_wave_plot():
     arr_t = np.linspace(0.0, 3.0, 250)
     arr_v = np.sin(2.5*np.pi*arr_t)
 
-    ax.plot(arr_t, arr_v, color='red', marker='o', label='sin(arr_t)')
+    ax.plot(arr_t, arr_v, color='red', label='sin(arr_t)')
     xticks = [0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0]
-    #xlabels = xticks
-    ax.xaxis.set_major_formatter(ticker.FixedFormatter(xticks))
+    xlabels = xticks
+    ax.set_xticks(xticks, xlabels)
     yticks = [-1, 0, 1]
-    #ylabels = [str(y) for y in yticks]
-    ax.yaxis.set_major_formatter(ticker.FixedFormatter(yticks))
-    plt.grid(linestyle = '--')
+    ylabels = [str(y) for y in yticks]
+    ax.set_yticks(yticks, ylabels)
     plt.legend()
+    plt.grid(linestyle = '--')
     plt.show()
-    #plt.savefig('sinewave.png')
     return fig
 
 
 def multi_curve_plot():
 
     # Write your functionality below
-    fig = plt.figure(figsize=(13,4))
+    fig = plt.figure(figsize=(13, 4))
     ax = fig.add_subplot(111)
-    arr_x = np.linspace(0.0,7.0,25)
-    arr_y1 = arr_x
-    arr_y2 = arr_x**2
-    arr_y3 = arr_x**3
     
     ax.set(title='Linear, Quadratic, & Cubic Equations',
       xlabel='arr_x', ylabel='f(arr_x)')
 
+    arr_x = np.linspace(0.0, 7.0, 25)
+    arr_y1 = arr_x
+    arr_y2 = arr_x**2
+    arr_y3 = arr_x**3
+
     ax.plot(arr_x, arr_y1, color='green', marker='^', label='y=arr_x')
     ax.plot(arr_x, arr_y2, color='blue', marker='s', label='y=arr_x**2')
     ax.plot(arr_x, arr_y3, color='red', marker='o', label='y=arr_x**3')
-    plt.legend() 
-    plt.show()   
-    #plt.savefig('multicurve.png')
+    plt.legend()    
+    plt.show()
     return fig
 
 
 def scatter_plot():
 
     # Write your functionality below
-    fig = plt.figure(figsize=(13,4))
+    fig = plt.figure(figsize=(13, 4))
     ax = fig.add_subplot(111)
     
     ax.set(title="Cars Sold by Company 'Z' in 2021",
       xlabel='Months', ylabel='No. of Cars Sold',
       xlim=(0, 13), ylim=(10, 110))
 
-    car_sales =[40, 65, 70, 40, 55, 60, 75, 60, 80, 95, 96, 105]
+    car_sales = [40, 65, 70, 40, 55, 60, 75, 60, 80, 95, 96, 105]
     months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
     ax.scatter(months, car_sales, color='green', marker='o', label='car sales')
