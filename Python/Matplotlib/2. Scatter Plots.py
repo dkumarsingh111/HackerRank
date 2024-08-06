@@ -1,3 +1,6 @@
+#Welcome to Matplotlib -2 - Scatter Plots
+
+
 import matplotlib
 matplotlib.use('Agg')
 import numpy as np
@@ -21,16 +24,17 @@ def sine_wave_plot():
     arr_t = np.linspace(0.0, 3.0, 250)
     arr_v = np.sin(2.5*np.pi*arr_t)
 
-    ax.plot(arr_t, arr_v, color='red', marker='o', label='sin(arr_t)', linestyle='--')
+    ax.plot(arr_t, arr_v, color='red', marker='o', label='sin(arr_t)')
     xticks = [0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0]
     #xlabels = xticks
-    ax.xaxis.set_major_formatter(ticker)
+    ax.xaxis.set_major_formatter(ticker.FixedFormatter(xticks))
     yticks = [-1, 0, 1]
-    ylabels = [str(y) for y in yticks]
-    ax.set_yticks(yticks, ylabels)
-    plt.legend()
+    #ylabels = [str(y) for y in yticks]
+    ax.yaxis.set_major_formatter(ticker.FixedFormatter(yticks))
     plt.grid(linestyle = '--')
+    plt.legend()
     plt.show()
+    #plt.savefig('sinewave.png')
     return fig
 
 
@@ -39,20 +43,20 @@ def multi_curve_plot():
     # Write your functionality below
     fig = plt.figure(figsize=(13,4))
     ax = fig.add_subplot(111)
-    
-    ax.set(title='Linear, Quadratic, & Cubic Equations',
-      xlabel='arr_x', ylabel='f(arr_x)')
-
     arr_x = np.linspace(0.0,7.0,25)
     arr_y1 = arr_x
     arr_y2 = arr_x**2
     arr_y3 = arr_x**3
+    
+    ax.set(title='Linear, Quadratic, & Cubic Equations',
+      xlabel='arr_x', ylabel='f(arr_x)')
 
-    ax.plot(arr_x, arr_y1, color='green', marker='^', label='y=arr_x', linestyle='--')
-    ax.plot(arr_x, arr_y2, color='blue', marker='s', label='y=arr_x**2', linestyle='--')
-    ax.plot(arr_x, arr_y3, color='red', marker='o', label='y=arr_x**3', linestyle='--')
-    plt.legend()    
-    plt.show()
+    ax.plot(arr_x, arr_y1, color='green', marker='^', label='y=arr_x')
+    ax.plot(arr_x, arr_y2, color='blue', marker='s', label='y=arr_x**2')
+    ax.plot(arr_x, arr_y3, color='red', marker='o', label='y=arr_x**3')
+    plt.legend() 
+    plt.show()   
+    #plt.savefig('multicurve.png')
     return fig
 
 
