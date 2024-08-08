@@ -11,6 +11,6 @@ plt.show()
 
 
 # A. Alteranative data points are marked with different color and size
-# B. Results in Error
+# Answer: B. Results in Error
 # C. All data points are marked in green color with size 60
 # D. All data points are marked in red color with size 20   
