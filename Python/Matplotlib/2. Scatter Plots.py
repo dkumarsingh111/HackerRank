@@ -26,7 +26,7 @@ def sine_wave_plot():
     ax.set_yticks(yticks, ylabels)
     plt.legend()
     plt.grid(linestyle = '--')
-    plt.show()
+    #plt.show()
     return fig
 
 
@@ -48,7 +48,7 @@ def multi_curve_plot():
     ax.plot(arr_x, arr_y2, color='blue', marker='s', label='y=arr_x**2')
     ax.plot(arr_x, arr_y3, color='red', marker='o', label='y=arr_x**3')
     plt.legend()    
-    plt.show()
+    #plt.show()
     return fig
 
 
@@ -70,7 +70,7 @@ def scatter_plot():
     xlabels = ['January', 'March', 'May', 'July', 'September', 'November']
     ax.set_xticks(xticks, xlabels)
     plt.legend()
-    plt.show()
+    #plt.show()
     return fig
 
 
