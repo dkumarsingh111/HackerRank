@@ -1,4 +1,5 @@
 from nltk.book import *
+import nltk
 
 text1: "Moby Dick by Herman Melville 1851 - text2: Sense and Sensibility by Jane Austen 1811 - text3: The Book of Genesis - text4: Inaugural Address Corpus - text5: Chat Corpus - text6: Monty Python and the Holy Grail - text7: Wall Street Journal - text8: Personals Corpus - text9: The Man Who Was Thursday by G . K . Chesterton 1908"
 
@@ -31,3 +32,18 @@ print(word_coverage2)
 #Filtering Words
 big_words = [word for word in set(text1) if len(word) > 15 ]
 print(big_words)
+
+sun_words = [word for word in set(text1) if word.startswith('Sun') ]
+print(sun_words)
+
+#Frequency Distribution
+text1_freq = nltk.FreqDist(text1)
+print(text1_freq['Sunday'])
+
+#Now let's identify three frequent words from text1_freq distribution using most_common method.
+top3_text1 = text1_freq.most_common(3)
+print(top3_text1)
+
+large_uncommon_words = [word for word in text1 if word.isalpha() and len(word) > 7 ]
+text1_uncommon_freq = nltk.FreqDist(large_uncommon_words)
+print(text1_uncommon_freq.most_common(3))
