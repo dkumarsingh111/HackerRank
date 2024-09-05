@@ -93,7 +93,7 @@ if __name__ == '__main__':
     #subprocess.check_call(
     #    [sys.executable, "-m", "pip", "install", 'test_plot3-0.1-py3-none-any.whl'], stdout=subprocess.DEVNULL)
     #from test_plot3 import matplotlib3
-    #usr_fig1 = barplot_of_iris_sepal_length()
-    #usr_fig2 = barplot_of_iris_measurements()
+    usr_fig1 = barplot_of_iris_sepal_length()
+    usr_fig2 = barplot_of_iris_measurements()
     usr_fig3 = hbarplot_of_iris_petal_length()
     #matplotlib3.save_answer(usr_fig1, usr_fig2, usr_fig3)
