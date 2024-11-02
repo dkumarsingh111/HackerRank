@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Python Tutor Clone</title>
+</head>
+<body>
+    <h1>Python Tutor Clone</h1>
+    <textarea id="code" rows="10" cols="50" placeholder="Write your Python code here..."></textarea><br>
+    <button id="run">Run Code</button>
+    <pre id="output"></pre>
+
+    <script>
+        document.getElementById('run').addEventListener('click', () => {
+            const code = document.getElementById('code').value;
+            fetch('/execute', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ code })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('output').textContent = data.output;
+                } else {
+                    document.getElementById('output').textContent = 'Error: ' + data.error + '\n' + data.traceback;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
