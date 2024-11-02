@@ -3,34 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Python Tutor Clone</title>
+    <title>Python Code Visualizer</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        textarea { width: 100%; height: 150px; }
+        button { margin-top: 10px; }
+        #output { margin-top: 20px; }
+    </style>
 </head>
 <body>
-    <h1>Python Tutor Clone</h1>
-    <textarea id="code" rows="10" cols="50" placeholder="Write your Python code here..."></textarea><br>
-    <button id="run">Run Code</button>
+    <h1>Python Code Visualizer</h1>
+    <textarea id="code" placeholder="Write your Python code here..."></textarea>
+    <button onclick="runCode()">Run Code</button>
     <pre id="output"></pre>
 
     <script>
-        document.getElementById('run').addEventListener('click', () => {
+        async function runCode() {
             const code = document.getElementById('code').value;
-            fetch('/execute', {
+            const response = await fetch('/run', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ code })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    document.getElementById('output').textContent = data.output;
-                } else {
-                    document.getElementById('output').textContent = 'Error: ' + data.error + '\n' + data.traceback;
-                }
             });
-        });
+            const data = await response.json();
+            document.getElementById('output').textContent = data.output || data.error;
+        }
     </script>
 </body>
 </html>
