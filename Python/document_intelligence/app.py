@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-from pdfminer.high_level import extract_text
+#from pdfminer.high_level import extract_text
 from docx import Document
 from PIL import Image
 import pytesseract
@@ -16,11 +16,11 @@ app.config['UPLOAD_FOLDER'] = 'uploads/'  # Folder to store uploaded files
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)  # Create the folder if it doesn't exist
 
 # Function to extract text from PDF files
-def extract_text_from_pdf(pdf_path):
-    try:
-        return extract_text(pdf_path)
-    except Exception as e:
-        return f"Error extracting text from PDF: {str(e)}"
+# def extract_text_from_pdf(pdf_path):
+#     try:
+#         return extract_text(pdf_path)
+#     except Exception as e:
+#         return f"Error extracting text from PDF: {str(e)}"
 
 # Function to extract text from Word files
 def extract_text_from_docx(docx_path):
@@ -66,7 +66,8 @@ def index():
 
             # Extract text based on file type
             if uploaded_file.filename.endswith('.pdf'):
-                extracted_text = extract_text_from_pdf(file_path)
+                #extracted_text = extract_text_from_pdf(file_path)
+                pass
             elif uploaded_file.filename.endswith('.docx'):
                 extracted_text = extract_text_from_docx(file_path)
             elif uploaded_file.filename.lower().endswith(('.png', '.jpg', '.jpeg')):
