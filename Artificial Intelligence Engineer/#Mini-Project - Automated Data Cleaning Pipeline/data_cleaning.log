@@ -2,3 +2,4 @@ ERROR:root:Error in encode_data: OneHotEncoder.__init__() got an unexpected keyw
 ERROR:root:Error in transform_data: 'NoneType' object has no attribute 'select_dtypes'
 ERROR:root:Error in feature_engineering: 'NoneType' object has no attribute 'select_dtypes'
 ERROR:root:Error in deduplicate_data: 'NoneType' object has no attribute 'drop_duplicates'
+ERROR:root:Error in transform_data: Unable to allocate 55.4 GiB for an array with shape (133915, 55500) and data type float64
