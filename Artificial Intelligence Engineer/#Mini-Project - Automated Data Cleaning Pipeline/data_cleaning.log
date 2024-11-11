@@ -1,0 +1,24 @@
+ERROR:root:Error in handle_missing_values: Cannot use mean strategy with non-numeric data:
+could not convert string to float: 'Bobby JacksOn'
+ERROR:root:Error in manipulate_data: 'NoneType' object is not subscriptable
+ERROR:root:Error in treat_outliers: 'NoneType' object has no attribute 'select_dtypes'
+ERROR:root:Error in encode_data: OneHotEncoder.__init__() got an unexpected keyword argument 'sparse'
+ERROR:root:Error in transform_data: Expected 2D array, got scalar array instead:
+array=nan.
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+ERROR:root:Error in feature_engineering: Expected 2D array, got scalar array instead:
+array=nan.
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+ERROR:root:Error in deduplicate_data: 'NoneType' object has no attribute 'drop_duplicates'
+ERROR:root:Error in handle_missing_values: Cannot use mean strategy with non-numeric data:
+could not convert string to float: 'Bobby JacksOn'
+ERROR:root:Error in manipulate_data: 'NoneType' object is not subscriptable
+ERROR:root:Error in treat_outliers: 'NoneType' object has no attribute 'select_dtypes'
+ERROR:root:Error in encode_data: OneHotEncoder.__init__() got an unexpected keyword argument 'sparse'
+ERROR:root:Error in transform_data: Expected 2D array, got scalar array instead:
+array=nan.
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+ERROR:root:Error in feature_engineering: Expected 2D array, got scalar array instead:
+array=nan.
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+ERROR:root:Error in deduplicate_data: 'NoneType' object has no attribute 'drop_duplicates'
