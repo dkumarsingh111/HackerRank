@@ -1,3 +1,1 @@
-ERROR:root:Error in manipulate_data: ('Age', 'Billing Amount')
-ERROR:root:Error in manipulate_data: ('Age', 'Billing Amount')
-ERROR:root:Error in manipulate_data: ('Age', 'Billing Amount')
+ERROR:root:Error in manipulate_data: manipulate_data() missing 1 required positional argument: 'feature_combinations'
