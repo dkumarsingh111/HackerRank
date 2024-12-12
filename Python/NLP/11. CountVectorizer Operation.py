@@ -12,4 +12,4 @@ print("Vocabulary:", vect.vocabulary_)
 vector = vect.transform(document)
 
 print("Encoded document is:")
-print(vector)
+print(vector.toarray())
