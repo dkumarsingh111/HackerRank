@@ -21,39 +21,36 @@ except pyodbc.Error as e:
 else:
     try:    
 
-        cursor = conn.cursor()
-        table_name = "PREPAYMENT"
-        cursor.execute(f"SELECT TOP 5 * FROM {table_name} WHERE RECORD_CREATE_DATE >= '2006-07-01'")  # Fetch only 5 rows
+        cursor = conn.cursor()        
+        output_csv_path = f"C:/DB/Exported_tables/AUDIT_USAGE.csv"  
+        cursor.execute("SELECT * FROM AUDIT_USAGE WHERE RECORD_CREATE_DATE >= ?")
+        
+
 
         columns = [column[0] for column in cursor.description]
 
-        # Fetch all rows
-        rows = cursor.fetchall()
+        batch_size = 1000  # Number of rows per batch
 
-        # Convert to pandas DataFrame
-        df = pd.DataFrame.from_records(rows, columns=columns)  
+        with open("AUDIT_USAGE.csv", "w", newline="") as file:
 
-        print(df)
+            file.write(",".join(columns) + "\n")
 
+            while True:
+                rows = cursor.fetchmany(batch_size)
+                if not rows:
+                    break  # Stop when no more data
+                
+                df = pd.DataFrame.from_records(rows, columns=columns)
+                df.to_csv(file, index=False, header=False, mode="a")  # 
 
-        # cursor = conn.cursor()
-        # tables = cursor.tables()
-        # print("\nSage50Accounts Tables:")
-        # for table in tables:
-        #     table_name = table.table_name
-        output_csv_path = f"C:/DB/Exported_tables/{table_name}.csv"            
-
-        #     # df = pd.read_sql(f"SELECT * FROM {table_name}", conn)
-        #     query = "SELECT * FROM AUDIT_USAGE"
-        #     df = pd.read_sql(query, conn)
-        #     print("hello")
+        print("Large dataset exported successfully!")          
 
         df.to_csv(output_csv_path, index=False)
-        print(f"Table '{table_name}' exported to '{output_csv_path}' successfully.")     
+        print(f"Table AUDIT_USAGE exported to '{output_csv_path}' successfully.")     
 
 
     except Exception as e:
-        print(f"Error in {table_name} export:", e)
+        print(f"Error in AUDIT_USAGE export:", e)
 finally:
     if conn:
         conn.close()
