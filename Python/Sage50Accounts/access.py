@@ -15,8 +15,8 @@ try:
     access_db_path = r"C:\DB\sage50db.accdb"
 
 # Connection string for Access (.accdb)
-    username = "Ansuman"  # Change to your username
-    password = "Tissuemed25"  # Change to your password
+    username = ""  # Change to your username
+    password = ""  # Change to your password
 
     # Connection string for password-protected MS Access (.accdb)
     conn_str = (
@@ -28,7 +28,6 @@ try:
 
     # Establish Connection
     conn = pyodbc.connect(conn_str)
-    # conn = pyodbc.connect('DSN=access50;UID=Ansuman;PWD=Tissuemed25')
     cursor = conn.cursor()
 
 except pyodbc.Error as e:
