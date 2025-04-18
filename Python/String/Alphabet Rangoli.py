@@ -1,4 +1,5 @@
 a = "abcdefghijklmnopqrstuvwxyz"
+
 def print_rangoli(size):
     # your code goes here
     lines = []
