@@ -31,7 +31,6 @@ def series(ip):
     total = 0.0
     for k in range(1, ip + 1):
         term = ((-1)**(k+1)) * ((frac(k)**2) / (frac(k) + k))
-        print(term)
         total += term
 
     return round(total, 2)
