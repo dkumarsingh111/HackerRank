@@ -42,4 +42,4 @@ def series(ip):
 if __name__ == "__main__":
     ip = int(sys.argv[1])
     print(series(ip))
-
+    
