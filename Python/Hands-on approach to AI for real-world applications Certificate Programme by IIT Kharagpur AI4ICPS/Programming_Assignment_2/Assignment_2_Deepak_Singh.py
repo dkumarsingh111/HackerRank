@@ -1,3 +1,10 @@
+# ==========================================================
+# IIT KHARAGPUR AI4ICPS HUB FOUNDATION
+# Hands-on Approach to AI, Cohort-4, November 2025
+# Programming Assignment 1
+# Assignment submitted by Deepak Singh
+# ==========================================================
+
 import sys
 import numpy as np
 
