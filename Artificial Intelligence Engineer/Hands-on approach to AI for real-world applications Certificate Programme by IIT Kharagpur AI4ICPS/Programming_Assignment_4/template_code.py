@@ -29,11 +29,6 @@ std_train = X_train.std()
 
 #########################################    code to be filled part a(i)
 
-mean_train = np.mean(X_train, axis=0)
-std_train = np.std(X_train, axis=0)
-
-std_train[std_train == 0] = 1.0
-
 X_train = (X_train - mean_train) / std_train
 X_test = (X_test - mean_train) / std_train
 
