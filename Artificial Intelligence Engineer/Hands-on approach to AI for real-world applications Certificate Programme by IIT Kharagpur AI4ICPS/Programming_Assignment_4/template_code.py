@@ -1,3 +1,10 @@
+# ==========================================================
+# IIT KHARAGPUR AI4ICPS HUB FOUNDATION
+# Hands-on Approach to AI, Cohort-4, November 2025
+# Programming Assignment 4
+# Assignment submitted by Deepak Singh
+# ==========================================================
+
 
 # Importing models - DO NOT CHANGE
 import sys
@@ -21,15 +28,24 @@ mean_train = X_train.mean()                                                     
 std_train = X_train.std()
 
 #########################################    code to be filled part a(i)
---------------------------------------                                                          # Fill up this '----------' section
---------------------------------------                                                          # Fill up this '----------' section
+
+mean_train = np.mean(X_train, axis=0)
+std_train = np.std(X_train, axis=0)
+
+std_train[std_train == 0] = 1.0
+
+X_train = (X_train - mean_train) / std_train
+X_test = (X_test - mean_train) / std_train
+
 #########################################    End
 
 class SVM(object):
 
     def linear_kernel(self, x1, x2):                                                            # defining the kernel functions, using numpy vectorisation to speed up the process
         #########################################    code to be filled a(ii)
-        ---------------------------                                                             # Fill up this '-----------' section
+        
+        return np.dot(x1, x2)
+
         ###############################              End                                        
 
     def __init__(self, kernel_str='linear', C=1.0, gamma=0.1):                                 # initializing the SVM class
@@ -85,14 +101,19 @@ class SVM(object):
     def predict(self, X):
         if self.kernel_str == 'linear':                                                                     # if linear, then the prediction is given by the linear combination of the support vectors
             #########################################    code to be filled a(iii)
-            --------------------------                                                             # Fill up this '----------' section
-            --------------------------                                                             # Fill up this '----------' section
+            
+            y_predict = np.dot(X, self.w) + self.b
+            return np.sign(y_predict)
+
             ##############################              End
         else:
             y_predict = np.sum(self.a * self.y_support_vectors * self.kernel(self, X, self.support_vectors.T), axis=1)  # if not linear, then the prediction is given by the kernel modification to the standard linear version
             #########################################    code to be filled a(iv)
-            --------------------------                                                              # Fill up this '----------' section
-            --------------------------                                                              # Fill up this '----------' section
+            
+            y_predict = y_predict + self.b
+            return np.sign(y_predict)
+
+
             ##############################              End
 
 # note that running on the full dataset is very slow (3-4 hours), so uncomment the code below and run this cell if you wish to check the results more quickly or apply grid search, comment it out again before running the full dataset
