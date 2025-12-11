@@ -1,3 +1,10 @@
+# ==========================================================
+# IIT KHARAGPUR AI4ICPS HUB FOUNDATION
+# Hands-on Approach to AI, Cohort-4, November 2025
+# Programming Assignment 5
+# Assignment submitted by Deepak Singh
+# ==========================================================
+
 """
 This program finds the best value of K in KMeans algorithm using Silhouette Coefficient for 'housing.csv' dataset. The range of K values to analyze is provided as a command line parameter.
 Syntax: python template.py <number> <number>
@@ -22,6 +29,38 @@ def find_best_kmeans(data, min_k, max_k):
         # Initialize the K-Means model
         # Use the data and calculate Silhouette Coefficient for the range of K provided
         # Return the best K with respect to Silhouette Coefficient 
+
+    X = data.select_dtypes(include=['number']).dropna()
+
+    if X.shape[0] == 0 or X.shape[1] == 0:
+        return -1
+
+    best_k = None
+    best_score = -1.0  # silhouette score ranges from -1 to 1
+
+    n_samples = X.shape[0]
+
+    for k in range(min_k, max_k + 1):
+        if k < 2 or k >= n_samples:
+            continue
+
+        kmeans = KMeans(n_clusters=k, n_init='auto', random_state=0)
+
+        labels = kmeans.fit_predict(X)
+
+        try:
+            score = metrics.silhouette_score(X, labels)
+        except Exception:
+            continue
+
+        if score > best_score:
+            best_score = score
+            best_k = k
+
+    if best_k is None:
+        return -1
+
+    return best_k
         
     """        End        """
 
