@@ -28,13 +28,43 @@ class AlexNet(nn.Module):
         super(AlexNet, self).__init__()
         self.feature = nn.Sequential(
             # Define feature extractor here...
+            nn.Conv2d(1, 32, kernel_size=5, stride=1, padding=1),
+            nn.ReLU(),
+
+            nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+
+            nn.MaxPool2d(kernel_size=2, stride=2),
+
+            nn.Conv2d(64, 96, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+
+            nn.Conv2d(96, 64, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+
+            nn.Conv2d(64, 32, kernel_size=3, stride=1, padding=1),
+            nn.ReLU(),
+
+            nn.MaxPool2d(kernel_size=2, stride=1)
         )
         self.classifier = nn.Sequential(
             # Define classifier here...
+            nn.Dropout(),
+            nn.Linear(4608, 2048),
+            nn.ReLU(),
+
+            nn.Dropout(),
+            nn.Linear(2048, 1024),
+            nn.ReLU(),
+
+            nn.Linear(1024, num)
         )
     
     def forward(self, x):
         # define forward network 'x' that combines feature extractor and classifier
+        x = self.feature(x)
+        x = x.view(x.size(0), -1)
+        x = self.classifier(x)
         return x
 
 """
