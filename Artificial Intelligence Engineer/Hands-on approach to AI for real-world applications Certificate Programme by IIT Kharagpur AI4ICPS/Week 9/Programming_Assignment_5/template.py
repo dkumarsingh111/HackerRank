@@ -50,7 +50,7 @@ class AlexNet(nn.Module):
         self.classifier = nn.Sequential(
             # Define classifier here...
             nn.Dropout(),
-            nn.Linear(32 * 12 * 12, 2048),
+            nn.Linear(4608, 2048),
             nn.ReLU(),
 
             nn.Dropout(),
