@@ -37,6 +37,14 @@ transformers.utils.logging.disable_progress_bar()
 """
 def clean_decoded_output(decoded_output):
     # clean the output from LLM and return
+    decoded_output = decoded_output.strip().upper()
+    cleaned = "NO"
+    # If model output contains YES, return YES, else NO
+    if "YES" in decoded_output:
+        cleaned = "YES"
+    else:
+        cleaned = "NO"
+    
     return cleaned
 
 def llm_function(model,tokenizer,a,b):
@@ -51,6 +59,25 @@ def llm_function(model,tokenizer,a,b):
 
     Note: The model (Flan-T5-XL) and tokenizer is already initialized. Do not modify that section.
     '''
+    # 1: Prompt formulation
+    prompt = (
+        "Question: " + a + "\n"
+        "Answer: " + b + "\n"
+        "Is the answer correct for the question? "
+        "Respond with only YES or NO."
+    )
+
+    # 2: Tokenize
+    inputs = tokenizer(prompt, return_tensors="pt")
+
+    # 3: Generate output
+    outputs = model.generate(**inputs, max_new_tokens=5)
+
+    # 4: Decode
+    decoded_output = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+    # 5: Clean and return
+    cleaned_output = clean_decoded_output(decoded_output)
 
     return cleaned_output
 
