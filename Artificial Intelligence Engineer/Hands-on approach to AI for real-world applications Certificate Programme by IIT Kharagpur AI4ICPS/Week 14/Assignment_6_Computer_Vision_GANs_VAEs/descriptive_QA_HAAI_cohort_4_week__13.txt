@@ -18,7 +18,7 @@ What is the key advantage of VAEs over standard autoencoders that makes them use
 
 
 ### WRITE ANSWER BELOW ###
-
+The key advantage of VAEs over standard autoencoders is that they learn a probabilistic latent space rather than a fixed encoding. This latent space follows a known distribution (usually Gaussian), which allows smooth sampling. Because of this, VAEs can generate new, realistic data points instead of just reconstructing inputs. This makes them effective generative models.
  
 
 
@@ -27,6 +27,7 @@ What is the key advantage of VAEs over standard autoencoders that makes them use
 What is the runtime complexity of self-attention in transformers with respect to sequence length L, and what causes this?
 
 ### WRITE ANSWER BELOW ###
+The runtime complexity of self-attention in transformers is O(L²), where L is the sequence length. This happens because each token computes attention scores with every other token in the sequence. As the sequence grows longer, the number of pairwise comparisons increases quadratically. This becomes a major bottleneck for long sequences.
 
 
 
@@ -35,6 +36,7 @@ What is the runtime complexity of self-attention in transformers with respect to
  What is mode collapse in GANs, and why is it problematic?
 
 ### WRITE ANSWER BELOW ###
+Mode collapse occurs when a GAN’s generator produces only a small set of outputs regardless of different inputs. As a result, many modes of the real data distribution are ignored. This is problematic because the generated samples lack diversity. Even if outputs look realistic, they fail to represent the full dataset.
 
 
 <<< QUESTION 4 >>>
@@ -42,6 +44,7 @@ What is the runtime complexity of self-attention in transformers with respect to
 What is the expected perplexity of a randomly initialized language model with vocabulary size V?
 
 ### WRITE ANSWER BELOW ###
+The expected perplexity of a randomly initialized language model is V, where V is the vocabulary size. This is because the model assigns nearly uniform probability to all tokens. With no learned structure, each word is equally likely. Perplexity reflects this complete uncertainty in prediction.
 
 
 <<< QUESTION 5 >>>
@@ -49,6 +52,7 @@ What is the expected perplexity of a randomly initialized language model with vo
 Why is the reparameterization trick necessary for training VAEs?
 
 ### WRITE ANSWER BELOW ###
+The reparameterization trick is necessary because VAEs involve random sampling, which normally blocks gradient flow. This trick rewrites sampling as a deterministic function plus random noise. Doing so allows gradients to pass through the sampling process during backpropagation. Without it, VAEs could not be trained using gradient descent.
 
 
 
