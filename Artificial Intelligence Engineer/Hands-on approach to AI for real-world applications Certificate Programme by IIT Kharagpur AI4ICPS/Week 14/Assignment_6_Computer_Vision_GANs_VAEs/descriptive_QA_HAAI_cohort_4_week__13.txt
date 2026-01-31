@@ -1,0 +1,63 @@
+------------------------------------------------------------------------------------------
+
+COURSE: HAAI
+TOPIC: Application Lab: (Computer Vision: GANs, VAEs)
+DUE-DATE: 08 FEB 2026
+
+INSTRUCTIONS:
+1. Do not modify any tag in this file. Just type your answers in the designated place.
+2. Do not change the file name and/or extension.
+3. Upload this file after answering in the portal.
+
+------------------------------------------------------------------------------------------
+
+<<< QUESTION 1 >>>
+
+
+What is the key advantage of VAEs over standard autoencoders that makes them useful as generative models?
+
+
+### WRITE ANSWER BELOW ###
+
+ 
+
+
+<<< QUESTION 2 >>>
+
+What is the runtime complexity of self-attention in transformers with respect to sequence length L, and what causes this?
+
+### WRITE ANSWER BELOW ###
+
+
+
+<<< QUESTION 3 >>>
+
+ What is mode collapse in GANs, and why is it problematic?
+
+### WRITE ANSWER BELOW ###
+
+
+<<< QUESTION 4 >>>
+
+What is the expected perplexity of a randomly initialized language model with vocabulary size V?
+
+### WRITE ANSWER BELOW ###
+
+
+<<< QUESTION 5 >>>
+
+Why is the reparameterization trick necessary for training VAEs?
+
+### WRITE ANSWER BELOW ###
+
+
+
+
+
+
+
+
+
+
+
+
