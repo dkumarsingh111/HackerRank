@@ -1,0 +1,24 @@
+{
+    "test_cases": [
+        {
+            "input": "The cat is sitting on the mat , A cat rests on a mat\n",
+            "output": "0.84 0.97"
+        },
+        {
+            "input": "The restaurant offers a variety of vegan dishes , There are many plant-based options on the menu at the cafe\n",
+            "output": "0.64 0.74"
+        },
+		{
+            "input": "The new iPhone has an improved camera , Android phones are known for their customizability\n",
+            "output": "0.64 0.91"
+        },
+		{
+            "input": "She loves painting landscapes during the summer , Quantum computing is expected to revolutionize technology",
+            "output": "0.57 0.9"
+        },
+		{
+            "input": "The fox jumped over the well , The fox did not jump over the well",
+            "output": "0.86 0.96"
+        }
+    ]
+}
