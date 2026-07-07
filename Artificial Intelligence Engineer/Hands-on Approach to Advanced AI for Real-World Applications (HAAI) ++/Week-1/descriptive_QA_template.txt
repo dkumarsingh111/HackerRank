@@ -1,0 +1,200 @@
+------------------------------------------------------------------------------------------
+
+COURSE: Hands-on Approach to Advanced AI for Real-world Applications (HAAI)++ - Cohort 2
+TOPIC:	Overview of Key Models: GPT, BERT, T5, LlaMa, Falcon 
+DUE-DATE:	28th June 2026 11PM
+
+INSTRUCTIONS:
+1. Do not modify any tag in this file. Just type your answers in the designated place.
+2. Do not change the file name and/or extension.
+3. Upload this file after answering in the portal.
+
+------------------------------------------------------------------------------------------
+
+<<< QUESTION 1 >>>
+
+What is the additional number of parameters that you will need apart from the pretrained weights in the following scenarios? (a) Text classification (3 classes) using BERT-base, (b) Text Summarization using T5.
+
+
+### WRITE ANSWER BELOW ###
+
+(a) Text Classification (3 Classes) using BERT-base
+
+BERT-base is a pretrained encoder model with:
+
+- Hidden size = 768
+- Output representation for the [CLS] token = 768-dimensional vector
+
+For a 3-class classification problem, we add a classification layer on top of BERT.
+
+The classification layer consists of:
+
+1. Weight matrix: 768×3=2304 parameters
+2. Bias vector: 3 parameters
+
+Therefore,
+
+	Additional Parameters=768×3+3
+			     =2304+3
+			     =2307
+
+Answer: Additional parameters required = 2307
+
+
+(b) Text Summarization using T5
+
+T5 is an encoder-decoder model designed for text generation tasks such as summarization.
+
+The pretrained T5 model already contains:
+
+- Encoder
+- Decoder
+- Language modeling head
+
+During fine-tuning for summarization, the same pretrained architecture is used without adding any new output layer.
+
+Therefore:
+
+	Additional Parameters=0
+
+Answer: Additional parameters required = 0
+
+(Only the existing pretrained parameters are fine-tuned.)
+
+
+
+<<< QUESTION 2 >>>
+
+Consider a task where you would have a paragraph and a question as input, and you need to generate the answer. Which pretrained model would you use among BERT, GPT and T5? What are the advantages and disadvantages of the allowed architectures in terms of (a) number of parameters to be fine-tuned and (b) representation capacity in the context of this problem?  Can you think of a method that can take advantage of each of the allowed architectures?
+
+### WRITE ANSWER BELOW ###
+
+We are given:
+
+Input: Paragraph + Question
+Output: Generated Answer
+
+Among BERT, GPT and T5, the most suitable model is T5 because it is naturally designed for sequence-to-sequence tasks where text is given as input and text is generated as output.
+
+_ _ _ _ _ _ _ _ 
+
+T5 treats every task as text-to-text.
+
+Input:
+
+	question: <question>
+	context: <paragraph>
+
+Output:
+
+	answer text
+
+Advantages
+(a) Number of parameters to fine-tune
+
+No additional output head is required.
+
+The pretrained encoder-decoder architecture is directly fine-tuned.
+
+(b) Representation capacity
+
+T5 combines:
+
+- Encoder understanding capability
+- Decoder generation capability
+
+Thus it can both:
+
+- Understand the paragraph
+- Generate natural answers
+
+This makes it highly suitable for QA.
+
+Disadvantages
+- More computationally expensive than BERT.
+- Larger memory requirement.
+
+_ _ _ _ _ _ _ _ 
+
+Yes. We can use all three architectures together.
+
+A hybrid system can take advantage of all architectures:
+
+Step 1: BERT
+
+Retrieve the most relevant passage from a large document collection.
+
+Step 2: GPT
+
+Generate a detailed and fluent answer.
+
+Step 3: T5
+
+Refine, summarize, or rewrite the answer.
+
+This combines:
+
+- BERT's understanding
+- GPT's generation
+- T5's text-to-text flexibility
+
+and often produces better results than using a single model.
+
+
+<<< QUESTION 3 >>>
+
+Show that the self-attention score in the rotatory embeddings depends on the positional difference between the query and key.
+
+### WRITE ANSWER BELOW ###
+
+
+Rotary Positional Embeddings (RoPE) encode position information by rotating query and key vectors in the embedding space.
+
+Let:q be the query vector and k be the key vector.
+
+Suppose token positions are: m and n respectively.
+
+
+Step 1: Apply Rotary Embedding
+
+For position m: qm=R(mθ)q
+
+For position n: kn=R(nθ)k
+
+where: R(⋅) is a rotation matrix.
+
+
+Step 2: Compute Attention Score
+
+Self-attention score is:Smn=qmTkn
+	​
+
+Substituting rotated vectors:Smn=(R(mθ)q)T(R(nθ)k)
+
+Using matrix properties: (Ax)T=xTAT
+			 Smn=qTR(mθ)TR(nθ)k
+
+
+Step 3: Use Rotation Matrix Property
+
+For rotation matrices:R(α)T=R(−α)
+
+Therefore: Smn=qTR(−mθ)R(nθ)k and R(−mθ)R(nθ)=R((n−m)θ)
+
+Hence: Smn=qTR((n−m)θ)k
+
+
+Final Result
+
+The attention score becomes: Smn=qTR((n−m)θ)k
+
+Notice that the score depends only on: (n−m)
+
+
+which is the relative positional difference between the key and query positions.
+
+Therefore, in Rotary Positional Embeddings, the self-attention score depends on the distance between tokens rather than their absolute positions.
+
+This property enables transformers using RoPE (such as LLaMA) to model relative positions naturally and generalize better to longer sequences.
+
+
