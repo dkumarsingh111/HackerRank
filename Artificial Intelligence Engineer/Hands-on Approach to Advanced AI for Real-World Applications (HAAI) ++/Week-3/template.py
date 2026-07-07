@@ -61,6 +61,51 @@ def llm_function(model,tokenizer,q,a,b,c,d):
     Note: The model (Flan-T5-XL) and tokenizer is already initialized. Do not modify that section.
     '''
 
+    prompt = f"""
+        you are an intelligent multiple-choice question answersing system.
+
+        Question: 
+        {q}
+
+        Options:
+        A. {a}
+        B. {b}
+        C. {c}
+        D. {d}
+
+        Select the single best answer.
+
+        Reply with ONLY one uppercase letter:
+        A
+        B
+        C
+        or
+        D
+
+        Do not explain your answer.
+    """
+
+    #Tokenize
+    inputs = tokenizer.encode(prompt, return_tensors="pt")
+
+    #Generate Output
+    outputs = model.generate(**inputs, max_new_tokens=2, do_sample=False)
+
+    #Decode
+    prediction = tokenizer.decode(outputs[0], skip_special_tokens=True).strip().upper()
+
+    match = re.search(r"\b([ABCD])\b", prediction)
+
+    if match:
+        final_output = match.group(1)
+    else:
+        for ch in prediction:
+            if ch in "ABCD":
+                final_output = ch
+                break
+            else:
+                final_output = "A"
+
     return final_output
 
 """
