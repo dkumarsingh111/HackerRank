@@ -1,0 +1,210 @@
+------------------------------------------------------------------------------------------
+
+COURSE: HAAI Plus Plus
+TOPIC: LLM Tokenizers, Embeddings & Pre-trained Models
+DUE-DATE: 05 JULY 2026, 11PM
+
+INSTRUCTIONS:
+1. Do not modify any tag in this file. Just type your answers in the designated place.
+2. Do not change the file name and/or extension.
+3. Upload this file after answering in the portal.
+
+------------------------------------------------------------------------------------------
+
+<<< QUESTION 1 >>>
+
+
+Explain the full pipeline from raw text to the input of the first Transformer layer. What role does each step play?
+
+
+### WRITE ANSWER BELOW ###
+
+The pipeline from raw text to the input of the first Transformer layer consists of several preprocessing and representation steps. Each step converts human language into a numerical form that a Transformer can process efficiently.
+
+1. Raw Text
+	Example : "The cat sat on the mat."
+This is human-readable text, but neural networks cannot operate directly on characters or words. The text must first be converted into numerical representations.
+Role:
+1. Provides the original linguistic information.
+2. Acts as the input data source.
+
+2. Text Normalization : Depending on the tokenizer and model, text may undergo preprocessing such as:	
+	The cat sat on the mat."
+	↓
+	"the cat sat on the mat."
+Possible operations:
+	Lowercasing
+	Unicode normalization
+	Removing extra spaces
+	Handling special symbols
+Modern models often perform minimal normalization because they rely on sophisticated tokenizers.
+Role:
+Standardizes text.
+Reduces vocabulary inconsistencies.
+
+3. Tokenization
+The text is split into tokens.
+	Example:
+	"The cat sat on the mat." become
+	["The", "cat", "sat", "on", "the", "mat", "."]
+Role:
+Converts text into manageable units.
+Handles unknown and rare words efficiently.
+Creates a finite vocabulary.
+
+4. Convert Tokens to Token IDs:
+	Each token is mapped to an integer from the vocabulary.
+Example:
+	"The" → 104
+	"cat" → 5821
+	"sat" → 3190
+	"on"  → 261
+	"the" → 1169
+	"mat" → 9342
+	"."   → 13
+Result:
+	[104, 5821, 3190, 261, 1169, 9342, 13]
+Role:
+Converts symbolic tokens into discrete numerical identifiers.
+Enables indexing into embedding tables.
+
+5. Embedding Lookup : 
+	The token IDs are converted into dense vectors using an embedding matrix.
+Role:
+Converts discrete IDs into continuous semantic representations.
+Allows similar tokens to have similar vector representations.
+
+6. Positional Encoding / Positional Embedding : 
+Transformers process all tokens simultaneously and therefore do not inherently know word order.
+Role:
+Injects sequence order information.
+Helps distinguish
+
+7. Combine Token and Position Information :
+	The positional vector is added to each token embedding.
+Role:
+Produces vectors containing both meaning and position.
+
+8. Optional Components (Model-Specific) : 
+	Some architectures add extra embeddings.
+		Segment Embeddings (BERT)
+	Other Metadata Embeddings:
+		Some specialized models include:
+			Speaker embeddings
+			Language embeddings
+			Document embeddings
+
+Role:
+Provides additional contextual information.
+
+9. Layer Normalization and Dropout (Model Dependent) : 
+	Some implementations apply:
+	1 LayerNorm(x)
+	2 Dropout(x)
+before entering the first Transformer block.
+Role:
+	Stabilizes training.
+	Improves generalization.
+
+In essence, the preprocessing pipeline transforms text from symbols → tokens → integer IDs → dense vectors enriched with positional information, producing the matrix that the Transformer's first self-attention layer can process.
+
+<<< QUESTION 2 >>>
+
+What is Byte Pair Encoding (BPE) and why did GPT-2 adopt it over a simple word-level vocabulary?
+
+### WRITE ANSWER BELOW ###
+
+Byte Pair Encoding (BPE) is a subword tokenization algorithm that builds a vocabulary of frequently occurring character sequences. Instead of treating every word as a unique token, BPE represents text as a sequence of subword units.
+  BPE Start with text split into individual characters. 
+  BPE then repeatedly:
+	Counts adjacent token pairs.
+	Finds the most frequent pair.
+	Merges that pair into a new token.
+	Repeats until the desired vocabulary size is reached.
+
+GPT-2 adopted Byte Pair Encoding because it combines the strengths of word-level and character-level tokenization:
+Smaller vocabulary than word-based systems.
+No out-of-vocabulary words because any text can be decomposed into subwords.
+Better generalization through reusable word pieces.
+More efficient sequences than character tokenization.
+Robust handling of arbitrary Unicode and web text via byte-level BPE.
+In short, BPE gives GPT-2 a practical way to represent virtually any text while keeping the vocabulary compact and the model computationally efficient.
+
+
+<<< QUESTION 3 >>>
+
+Describe the four main decoding/sampling strategies for text generation. When should you choose each one?
+
+### WRITE ANSWER BELOW ###
+
+In autoregressive language models (GPT-style models), the model produces a probability distribution over the next token at each step. A decoding or sampling strategy determines how the next token is selected from that distribution.
+The four most commonly discussed strategies are:
+
+1.Greedy Decoding:
+	Use greedy decoding when:
+You need maximum speed.
+Deterministic output is important.
+The task has one obvious correct continuation.
+Examples:
+Classification-style generation
+Structured extraction
+Certain chatbot workflows
+
+2. Beam Search:
+	Use beam search when:
+Accuracy matters more than creativity.
+You want the highest-likelihood sequence.
+Multiple candidate paths should be explored.
+Examples:
+Machine translation
+Speech recognition
+Summarization
+
+3.Top-k Sampling : 
+	Use top-k when:
+You want controlled creativity.
+Randomness is desirable.
+Multiple possible outputs are useful.
+Examples:
+Story writing
+Dialogue systems
+Brainstorming
+
+4.Top-p (Nucleus) Sampling: 
+	Use top-p when:
+You want the best balance of quality and diversity.
+Natural-language generation is the goal.
+Creative, human-like outputs are desired.
+Examples:
+Chatbots
+Creative writing
+General-purpose LLM generation
+
+	Rule of Thumb:
+Greedy decoding → fastest, deterministic output.
+Beam search → best when seeking the highest-probability sequence (translation, summarization).
+Top-k sampling → controlled creativity and variation.
+Top-p (nucleus) sampling → generally the preferred choice for modern chatbots and creative text generation because it balances coherence and diversity.
+
+<<< QUESTION 4 >>>
+
+Why does the sliding-window data loader use a stride smaller than the context length, and what is the trade-off involved?
+
+### WRITE ANSWER BELOW ###
+
+In language-model training, a sliding-window data loader creates training examples by moving a fixed-size context window across a long text corpus.
+
+A sliding-window data loader uses a stride smaller than the context length so that training windows overlap. This:
+Creates more training examples from the same corpus.
+Lets tokens appear in multiple contexts.
+Reduces boundary effects.
+Improves learning of local language patterns.
+The trade-off is data efficiency versus computational efficiency:
+Smaller stride → better learning and corpus coverage, but more redundancy and higher training cost.
+Larger stride → faster and cheaper training, but fewer examples and less effective use of the available text.
+
+
+
+
+
+
