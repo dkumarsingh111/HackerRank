@@ -61,6 +61,91 @@ def llm_function(model,tokenizer,questions):
     Note: The model (Flan-T5-XL) and tokenizer is already initialized. Do not modify that section.
     '''
 
+    # Unpack the three related questions.
+    question_1, question_2, question_3 = questions
+
+    # Use deterministic generation throughout for reproducible evaluation.
+    device = next(model.parameters()).device
+
+    def generate_answer(prompt, max_new_tokens):
+        inputs = tokenizer(
+            prompt,
+            return_tensors="pt",
+            truncation=True,
+            max_length=512
+        )
+        inputs = {key: value.to(device) for key, value in inputs.items()}
+
+        with torch.no_grad():
+            output_ids = model.generate(
+                **inputs,
+                max_new_tokens=max_new_tokens,
+                do_sample=False,
+                num_beams=1
+            )
+
+        return tokenizer.decode(
+            output_ids[0],
+            skip_special_tokens=True
+        ).strip()
+
+    # Step 1: Generate the answer to Question 1.
+    answer_1 = generate_answer(
+        "Answer the following question briefly and factually.\n"
+        "Question: " + question_1 + "\n"
+        "Answer:",
+        64
+    )
+
+    # Step 2: Use Question 1 and its generated answer as the
+    # one-shot/in-context example for Question 2.
+    answer_2 = generate_answer(
+        "Use the previous question and answer as context to answer the next "
+        "related question. Resolve references such as he, she, it, there, "
+        "this, and that from the context.\n\n"
+        "Previous question: " + question_1 + "\n"
+        "Previous answer: " + answer_1 + "\n\n"
+        "Question: " + question_2 + "\n"
+        "Answer:",
+        64
+    )
+
+    # Step 3: Use Question 2 and its answer as the one-shot/in-context
+    # example. Constrain generation to a single token so that the model
+    # produces only the requested binary answer.
+    final_answer = generate_answer(
+        "Answer the final question using the previous questions and answers as context. "
+        "Answer with exactly YES or NO and nothing else.\n\n"
+        "Question 1: " + question_1 + "\n"
+        "Answer 1: " + answer_1 + "\n\n"
+        "Question 2: " + question_2 + "\n"
+        "Answer 2: " + answer_2 + "\n\n"
+        "Final question: " + question_3 + "\n"
+        "Answer only YES or NO:",
+        5
+    )
+
+    # Clean the generated text and guarantee the required output contract.
+    cleaned = re.sub(r"[^A-Za-z]", " ", final_answer).upper()
+    words = cleaned.split()
+
+    if "YES" in words:
+        final_output = "YES"
+    elif "NO" in words:
+        final_output = "NO"
+    else:
+        # A deterministic fallback prompt is used only if the first binary
+        # generation did not contain an explicit YES/NO token.
+        fallback = generate_answer(
+            "Based on this context, answer the question with only YES or NO.\n"
+            "Context: " + answer_2 + "\n"
+            "Question: " + question_3 + "\n"
+            "Answer:",
+            3
+        )
+        fallback_words = re.sub(r"[^A-Za-z]", " ", fallback).upper().split()
+        final_output = "YES" if "YES" in fallback_words else "NO"
+
     return final_output
 
 """
