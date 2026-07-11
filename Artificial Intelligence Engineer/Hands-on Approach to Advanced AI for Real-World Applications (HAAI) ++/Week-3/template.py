@@ -86,7 +86,7 @@ def llm_function(model,tokenizer,q,a,b,c,d):
     """
 
     #Tokenize
-    inputs = tokenizer.encode(prompt, return_tensors="pt")
+    inputs = tokenizer(prompt, return_tensors="pt")
 
     #Generate Output
     outputs = model.generate(**inputs, max_new_tokens=2, do_sample=False)
