@@ -1,0 +1,37 @@
+﻿------------------------------------------------------------------------------------------
+
+
+COURSE: HAAI Plus Plus
+TOPIC: AI safety & Agentic AI
+DUE-DATE: 26 July 2026
+
+
+INSTRUCTIONS:
+1. Do not modify any tag in this file. Just type your answers in the designated place.
+2. Do not change the file name and/or extension.
+3. Upload this file after answering in the portal.
+
+
+------------------------------------------------------------------------------------------
+
+
+<<< QUESTION 1 >>>
+
+
+Identify and describe the four major sources of AI risk mentioned in the sources.
+
+
+### WRITE ANSWER BELOW ###
+
+
+
+
+
+
+<<< QUESTION 2 >>>
+
+
+Explain how "AI Racing Dynamics" between corporations or militaries can lead to the erosion of safety standards. Provide at least two historical examples from other industries to illustrate this concept.
+
+
+### WRITE ANSWER BELOW ###
