@@ -1,0 +1,81 @@
+﻿------------------------------------------------------------------------------------------
+
+
+COURSE: HAAI Plus Plus
+TOPIC: LLM Fine-Tuning & Security
+DUE-DATE: 2 August 2026
+
+
+INSTRUCTIONS:
+1. Do not modify any tag in this file. Just type your answers in the designated place.
+2. Do not change the file name and/or extension.
+3. Upload this file after answering in the portal.
+
+
+------------------------------------------------------------------------------------------
+
+
+<<< QUESTION 1 >>>
+
+You fine-tuned LLaMA-2 with 4-bit QLoRA on your company's internal financial documents and now serve it behind an API. Give two reasons quantization helped you deploy it, and name one new security risk that exists specifically because the model was fine-tuned on internal data.
+
+### WRITE ANSWER BELOW ###
+
+Two reasons quantization (4-bit QLoRA) helped deployment
+1. Reduced memory footprint  
+Quantization shrinks the model weights from full precision (e.g., 16-bit or 32-bit) down to 4-bit representations. This dramatically lowers GPU/CPU memory usage, allowing the fine-tuned LLaMA-2 model to fit on more modest hardware and enabling cost-effective serving.
+
+2. Faster inference  
+With smaller weight representations, the model can process inputs more quickly. This improves latency for API calls and makes real-time or near-real-time responses feasible, which is critical for production deployment.
+
+New security risk from fine tuning on internal financial data
+Data leakage through model outputs  
+Because the model was fine-tuned on sensitive internal financial documents, there’s a risk it could inadvertently expose proprietary or confidential information when queried. For example, a cleverly crafted prompt might elicit details about internal forecasts, transactions, or client records. This risk is unique to fine-tuning on internal data — the model now “knows” sensitive content that could be extracted if not properly safeguarded.
+
+
+
+
+<<< QUESTION 2 >>>
+
+
+During fine-tuning you compared "before vs after" using perplexity and ROUGE. Once the model is live, how do those evaluation ideas carry over to monitoring the API, and what is one metric you'd track in production that you would not compute during fine-tuning?
+
+
+### WRITE ANSWER BELOW ###
+
+Carrying over perplexity and ROUGE to API monitoring
+Perplexity (proxy for fluency): In production, you wouldn’t recompute perplexity on every API call, but you can approximate it by periodically sampling outputs and checking whether the language distribution looks natural. This helps detect drift — e.g., if the model starts producing incoherent or repetitive text.
+
+ROUGE (proxy for content overlap): While ROUGE is usually used against reference texts during fine tuning, in production you can adapt the idea by comparing outputs against known templates, FAQs, or gold responses. For example, if the API is supposed to answer financial policy questions consistently, you can measure overlap with a curated set of “expected” answers to catch degradation.
+
+One production only metric
+Latency / response time per request  
+This is critical once the model is live behind an API but irrelevant during fine-tuning. Tracking latency ensures the service meets SLAs and user expectations, and helps identify bottlenecks in serving infrastructure.
+
+Other production-specific metrics often include error rates, throughput, and user satisfaction signals (like thumbs-up/down feedback), but latency is the standout example of something you’d never compute during fine-tuning.
+
+
+
+
+<<< QUESTION 3 >>>
+
+A teammate argues: "We quantized to 4-bit, so the model is smaller and therefore harder to attack — less can be extracted from it." Do you agree? Explain the relationship between quantization and API security.
+
+
+### WRITE ANSWER BELOW ###
+
+
+Quantization reduces size, not knowledge  
+Moving to 4-bit weights makes the model lighter and faster, but it doesn’t erase the information the model learned during fine-tuning. The internal representations are still there, just stored more compactly. Attackers can still query the API and attempt prompt injection, model inversion, or data extraction attacks regardless of bit-width.
+
+Security exposure is unchanged at the API level  
+The attack surface comes from the fact that the model is accessible through an API and was trained on sensitive internal data. Quantization doesn’t make it “harder to extract” — it only changes how efficiently the model runs. If anything, smaller models can be easier to replicate or brute-force because they’re cheaper to run, which could lower the barrier for adversaries.
+
+Relationship between quantization and API security
+Quantization is a performance and cost optimization, not a security control. It helps with deployment efficiency but does not mitigate risks like:
+
+* Prompt injection or malicious queries
+* Data leakage from fine-tuned internal documents
+* Model extraction or replication attacks
+
+So the right way to think about it: quantization improves scalability, but security must be handled separately through access controls, monitoring, and output filtering.
