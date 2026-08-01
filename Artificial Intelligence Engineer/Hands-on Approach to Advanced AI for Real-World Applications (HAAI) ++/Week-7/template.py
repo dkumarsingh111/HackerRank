@@ -60,6 +60,45 @@ def llm_function(model,tokenizer,context,question):
     Remember that there should be no additional output including any warning messages in the terminal.
     '''
 
+     # In-context prompt
+    prompt = (
+        "Answer the question using only the given context.\n"
+        "Respond with exactly YES or NO.\n\n"
+        f"Context: {context}\n"
+        f"Question: {question}\n"
+        "Answer:"
+    )
+
+    # Tokenize
+    inputs = tokenizer(
+        prompt,
+        return_tensors="pt",
+        truncation=True
+    )
+
+    # Decoder starts with pad token for T5
+    decoder_input_ids = torch.tensor([[model.config.decoder_start_token_id]])
+
+    with torch.no_grad():
+        outputs = model(
+            input_ids=inputs.input_ids,
+            attention_mask=inputs.attention_mask,
+            decoder_input_ids=decoder_input_ids
+        )
+
+    # First-token logits
+    logits = outputs.logits[0, -1]
+
+    # Candidate token ids
+    yes_ids = tokenizer.encode("YES", add_special_tokens=False)
+    no_ids = tokenizer.encode("NO", add_special_tokens=False)
+
+    # Compare logits of first token
+    yes_score = logits[yes_ids[0]].item()
+    no_score = logits[no_ids[0]].item()
+
+    final_output = "YES" if yes_score >= no_score else "NO"
+
     return final_output
 
 
