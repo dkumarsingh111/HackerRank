@@ -50,8 +50,8 @@ def extract_text_from_file(file_path: Path) -> str:
     """Read a supported resume format and normalize it to plain text."""
     ext = file_path.suffix.lower()
 
-    if ext in {".txt", ".md"}:
-        return file_path.read_text(encoding="utf-8", errors="replace")
+    #if ext in {".txt", ".md"}:
+    #    return file_path.read_text(encoding="utf-8", errors="replace")
 
     if ext == ".pdf":
         if PdfReader is None:
@@ -78,12 +78,12 @@ def extract_text_from_file(file_path: Path) -> str:
                     parts.append(" | ".join(cells))
         return "\n".join(parts)
 
-    if ext == ".rtf":
-        raw = file_path.read_text(encoding="utf-8", errors="replace")
-        raw = re.sub(r"\\'[0-9a-fA-F]{2}", " ", raw)
-        raw = re.sub(r"\\[a-zA-Z]+-?\d* ?", " ", raw)
-        raw = re.sub(r"[{}]", " ", raw)
-        return re.sub(r"\s+", " ", raw).strip()
+    #if ext == ".rtf":
+    #    raw = file_path.read_text(encoding="utf-8", errors="replace")
+    #    raw = re.sub(r"\\'[0-9a-fA-F]{2}", " ", raw)
+    #    raw = re.sub(r"\\[a-zA-Z]+-?\d* ?", " ", raw)
+    #    raw = re.sub(r"[{}]", " ", raw)
+    #    return re.sub(r"\s+", " ", raw).strip()
 
     if ext == ".doc":
         soffice = shutil.which("soffice") or shutil.which("libreoffice")

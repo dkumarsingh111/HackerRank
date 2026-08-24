@@ -1,0 +1,40 @@
+{
+  "project": "HPPCS01 - CV Creation using LLMs",
+  "models": {
+    "generation": "gemma3:1b",
+    "review": "llama3.2:1b"
+  },
+  "job_description_used": false,
+  "profiles_processed": 2,
+  "successful_profiles": 1,
+  "results": [
+    {
+      "input": "profile_10.pdf",
+      "output_cv": "profile_10_final_cv.docx",
+      "output_pdf": "",
+      "structured_output": "profile_10_structured.json",
+      "review_output": "profile_10_review.json",
+      "ats_output": "",
+      "keyword_score": 0,
+      "required_skill_score": 0,
+      "review_score": 0,
+      "status": "REGENERATE",
+      "issues": []
+    },
+    {
+      "input": "profile_12.pdf",
+      "output_cv": "",
+      "output_pdf": "",
+      "structured_output": "",
+      "review_output": "",
+      "ats_output": "",
+      "keyword_score": 0,
+      "required_skill_score": 0,
+      "review_score": 0,
+      "status": "ERROR",
+      "issues": [
+        "No text could be extracted from profile_12.pdf. The file may be scanned/image-only."
+      ]
+    }
+  ]
+}

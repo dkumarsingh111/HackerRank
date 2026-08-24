@@ -48,7 +48,8 @@ DEFAULT_GEMMA_MODEL = "gemma3:1b"
 DEFAULT_LLAMA_MODEL = "llama3.2:1b"
 DEFAULT_OLLAMA_HOST = "http://localhost:11434"
 
-SUPPORTED_EXTENSIONS = {".txt", ".md", ".pdf", ".docx", ".doc", ".rtf"}
+#SUPPORTED_EXTENSIONS = {".txt", ".md", ".pdf", ".docx", ".doc", ".rtf"}
+SUPPORTED_EXTENSIONS = {".pdf", ".docx", ".doc"}
 
 SECTION_NAMES = {
     "SUMMARY": "PROFESSIONAL SUMMARY",
@@ -162,12 +163,12 @@ def extract_doc_text(path: Path) -> str:
         ).strip()
 
 
-def extract_rtf_text(path: Path) -> str:
-    raw = path.read_text(encoding="utf-8", errors="replace")
-    raw = re.sub(r"\\'[0-9a-fA-F]{2}", " ", raw)
-    raw = re.sub(r"\\[a-zA-Z]+-?\d* ?", " ", raw)
-    raw = re.sub(r"[{}]", " ", raw)
-    return re.sub(r"\s+", " ", raw).strip()
+# def extract_rtf_text(path: Path) -> str:
+#     raw = path.read_text(encoding="utf-8", errors="replace")
+#     raw = re.sub(r"\\'[0-9a-fA-F]{2}", " ", raw)
+#     raw = re.sub(r"\\[a-zA-Z]+-?\d* ?", " ", raw)
+#     raw = re.sub(r"[{}]", " ", raw)
+#     return re.sub(r"\s+", " ", raw).strip()
 
 
 def extract_text_from_file(path: Path) -> str:
@@ -188,8 +189,8 @@ def extract_text_from_file(path: Path) -> str:
     if suffix == ".doc":
         return extract_doc_text(path)
 
-    if suffix == ".rtf":
-        return extract_rtf_text(path)
+    # if suffix == ".rtf":
+    #     return extract_rtf_text(path)
 
     raise ValueError(
         f"Unsupported input format: {suffix}. "
@@ -210,9 +211,9 @@ def discover_input_files(input_dir: Path, limit: int) -> List[Path]:
         ".pdf": 0,
         ".docx": 1,
         ".doc": 2,
-        ".rtf": 3,
-        ".txt": 4,
-        ".md": 5,
+        # ".rtf": 3,
+        # ".txt": 4,
+        # ".md": 5,
     }
 
     selected: Dict[str, Path] = {}
