@@ -1,0 +1,29 @@
+[
+  {
+    "ad": 1,
+    "text": "ad_text_1.txt",
+    "template": "ad_template.png",
+    "visual": "ad1_generated_visual.png",
+    "output": "final_ad_1.png",
+    "mode": "demo",
+    "status": "success"
+  },
+  {
+    "ad": 2,
+    "text": "ad_text_2.txt",
+    "template": "ad_template.png",
+    "visual": "ad2_generated_visual.png",
+    "output": "final_ad_2.png",
+    "mode": "demo",
+    "status": "success"
+  },
+  {
+    "ad": 3,
+    "text": "ad_text_3.txt",
+    "template": "ad_template.png",
+    "visual": "ad3_generated_visual.png",
+    "output": "final_ad_3.png",
+    "mode": "demo",
+    "status": "success"
+  }
+]

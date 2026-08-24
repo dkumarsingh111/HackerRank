@@ -1,0 +1,22 @@
+{
+  "name": "Sneha Iyer",
+  "contact": {
+    "email": "sneha.iyer@example.com",
+    "phone": "",
+    "location": ""
+  },
+  "summary": "QA automation engineer with 5 years of experience in Selenium, Python and API testing.",
+  "education": [
+    "B.Tech Electronics, 2019."
+  ],
+  "experience": [],
+  "skills": [],
+  "achievements": [
+    "Automated 70% of regression suite and reduced regression execution time by 55%."
+  ],
+  "projects": [
+    "Web and API automation framework with reusable test components."
+  ],
+  "certifications": [],
+  "interests": []
+}

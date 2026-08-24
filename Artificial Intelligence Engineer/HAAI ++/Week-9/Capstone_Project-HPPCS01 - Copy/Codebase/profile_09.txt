@@ -1,0 +1,8 @@
+Candidate: Karan Gupta
+Email karan.gupta@example.com | Noida | +91-90000-10009
+Database engineer with 5 years of experience in SQL Server, performance tuning and ETL support.
+At DataOps Corp since 2021; earlier at SQLWorks, 2019-2021.
+Education: B.Tech CSE, 2019.
+Skills: SQL Server, T-SQL, SSIS, Azure SQL, performance tuning, PowerShell, monitoring.
+Achievements: Tuned high-volume queries and reduced average batch processing time by 45%.
+Project: ETL monitoring and alerting solution.

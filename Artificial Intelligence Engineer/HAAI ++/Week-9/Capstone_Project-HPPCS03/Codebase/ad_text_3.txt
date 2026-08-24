@@ -1,0 +1,5 @@
+Brand: AeroFit
+Product: Smart Fitness Watch
+Headline: Your goals. Your data. Your day.
+Message: Track workouts, heart rate, sleep and daily progress in one sleek watch.
+CTA: MOVE SMARTER

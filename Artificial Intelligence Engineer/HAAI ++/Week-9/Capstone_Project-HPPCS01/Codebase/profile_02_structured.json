@@ -1,0 +1,34 @@
+{
+  "name": "Priya Menon",
+  "contact": {
+    "email": "priya.menon@example.com",
+    "phone": "+91-90000-10002",
+    "location": "Chennai"
+  },
+  "summary": "Data analyst with 3.5 years of experience turning business data into dashboards and actionable insights.",
+  "education": [
+    "degree: B.Sc. Statistics | year: 2021"
+  ],
+  "experience": [
+    "company: InsightWorks | title: Data Analyst | dates: 2023-present | description: Creates Power BI dashboards, SQL queries and monthly business reports.",
+    "company: DataVista | title: Data Analyst | dates: 2021-2023 | description: Prepared Excel models and automated reporting."
+  ],
+  "skills": [
+    "SQL",
+    "Power BI",
+    "Excel",
+    "Python",
+    "Pandas",
+    "data visualization"
+  ],
+  "achievements": [
+    "Cut monthly reporting time from two days to four hours",
+    "Created KPI dashboards used by sales leadership"
+  ],
+  "projects": [
+    "Sales performance dashboard",
+    "Customer churn analysis"
+  ],
+  "certifications": [],
+  "interests": []
+}

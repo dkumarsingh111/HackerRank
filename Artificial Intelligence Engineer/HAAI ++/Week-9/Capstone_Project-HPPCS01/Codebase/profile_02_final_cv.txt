@@ -1,0 +1,46 @@
+Priya Menon
++91-90000-10002 | priya.menon@example.com | Chennai
+Chennai, India
+
+Professional Summary
+As a Data Analyst with 3.5 years of experience, I leverage data to drive informed decision-making and improve business outcomes. I possess a strong foundation in data manipulation, visualization, and reporting, and I am adept at transforming raw data into actionable insights. My experience includes creating compelling dashboards and reports that effectively communicate key metrics and trends. I am proficient in SQL, Power BI, and Excel, and I am passionate about utilizing data to solve business challenges.
+
+Skills
+I am proficient in SQL, Power BI, Excel, Python, Pandas, and data visualization. I have experience in data manipulation, analysis, and reporting.
+
+Professional Experience
+Company: InsightWorks
+Title: Data Analyst
+Dates: 2023 – Present
+Description:
+*   Created Power BI dashboards, SQL queries, and monthly business reports.
+*   Prepared Excel models and automated reporting.
+*   Improved data visualization and reporting processes.
+
+Company: DataVista
+Title: Data Analyst
+Dates: 2021 – 2023
+Description:
+*   Prepared Excel models and automated reporting.
+*   Created KPI dashboards used by sales leadership.
+
+Education
+Degree: B.Sc. Statistics
+Year: 2021
+
+Achievements
+*   Reduced monthly reporting time from two days to four hours.
+*   Created KPI dashboards used by sales leadership.
+
+Projects
+*   Sales performance dashboard
+*   Customer churn analysis
+
+Certifications
+*   None
+
+Interests
+*   None
+
+ATS Alignment:
+The provided resume aligns with the job description by highlighting relevant skills and experience, using a professional tone, and presenting information in a structured manner. The skills section is directly relevant to the job description. The experience section is concisely presented, focusing on accomplishments rather than detailed descriptions.

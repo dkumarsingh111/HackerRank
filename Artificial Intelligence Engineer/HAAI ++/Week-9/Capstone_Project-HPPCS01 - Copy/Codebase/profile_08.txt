@@ -1,0 +1,8 @@
+Name: Meera Nair
+Email meera.nair@example.com | Kochi | +91-90000-10008
+Frontend developer with 4 years of experience in React and TypeScript.
+Experience at WebCraft (2022-present) and PixelSoft (2020-2022).
+Education: B.Tech IT, 2020.
+Skills: React, TypeScript, JavaScript, HTML, CSS, REST APIs, Git.
+Achievements: Improved application load experience by optimizing reusable components and bundle size.
+Project: Customer self-service portal.

@@ -1,0 +1,11 @@
+HAAI++ Capstone HPPCS01 - Execution Instructions
+
+1. cd Codebase
+2. python -m pip install -r requirements.txt
+3. ollama pull gemma3:1b
+4. ollama pull llama3.2:1b
+5. ollama serve
+6. python main.py --gemma-model gemma3:1b --llama-model llama3.2:1b
+
+Outputs: 10 final CV DOCX files, 10 structured JSON files,
+10 review JSON files and evaluation_summary.json.

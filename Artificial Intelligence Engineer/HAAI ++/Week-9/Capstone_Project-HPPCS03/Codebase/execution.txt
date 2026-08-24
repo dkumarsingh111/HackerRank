@@ -1,0 +1,59 @@
+HPPCS[03] Advertisement Creator – Execution Guide
+
+PROJECT INPUTS
+--------------
+1. ad_text_1.txt
+2. ad_text_2.txt
+3. ad_text_3.txt
+4. ad_template.png (single advertisement template reused for all three outputs)
+
+MODE 1: DEMO / EVALUATION WITHOUT MODEL DOWNLOADS
+--------------------------------------------------
+The demo mode uses the included realistic visual samples. It verifies the
+advertisement-template composition workflow without requiring Ollama, FLUX,
+or a GPU.
+
+Run from the Codebase directory:
+    python main.py --demo
+
+Expected outputs:
+    final_ad_1.png
+    final_ad_2.png
+    final_ad_3.png
+    generation_log.json
+
+MODE 2: FULL AI PIPELINE
+------------------------
+Recommended environment: Google Colab with a CUDA GPU. The capstone
+instructions permit execution in notebooks/Colab, while the submitted final
+code remains main.py.
+
+For a local Ollama setup, install Ollama and download:
+    ollama pull qwen3:8b
+    ollama pull llama3.2:3b
+
+Install Python dependencies:
+    pip install -r requirements.txt
+
+Authenticate with Hugging Face and make sure the account has access to
+FLUX.1-schnell.
+
+Run:
+    python main.py --live
+
+Pipeline:
+    Advertisement Text
+        -> Qwen3 8B (creative brief)
+        -> Llama 3.2 3B (image prompt)
+        -> FLUX.1-schnell (realistic product visual)
+        -> Pillow (single template + exact copy)
+        -> Three final advertisements
+
+IMPORTANT
+---------
+The image model is instructed not to generate advertising typography. Exact
+headline, message and CTA text are rendered by Python/Pillow so the output
+remains readable and deterministic.
+
+The single ad_template.png is reused for all three advertisement texts, as
+required by the project specification.

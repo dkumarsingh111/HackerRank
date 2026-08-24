@@ -1,0 +1,35 @@
+Rohan Verma
+rohan.verma@example.com
+
+PROFESSIONAL SUMMARY
+Rohan Verma is a highly skilled Cloud/platform engineer with 6 years of experience specializing in supporting Azure environments and CI/CD pipelines.  Driven by a passion for efficient infrastructure management, Rohan brings a proven track record of designing, implementing, and maintaining scalable and reliable cloud solutions.  His expertise encompasses Terraform deployments, Azure DevOps workflows, and comprehensive monitoring and release pipelines, consistently delivering robust and automated infrastructure.
+
+SKILLS
+Rohan possesses a strong foundation in cloud technologies, including Azure, Terraform, Azure DevOps, GitHub Actions, Linux, Docker, and Kubernetes.  He is proficient in PowerShell scripting for automation and system administration.  He is also adept at deploying and managing applications within Azure environments.
+
+PROFESSIONAL EXPERIENCE
+*   CloudAxis (2021 – Present)
+    *   Managed Azure resources, including infrastructure provisioning and optimization.
+    *   Implemented and maintained Terraform infrastructure deployments, resulting in a 60% reduction in environment setup time.
+    *   Led the development and execution of CI/CD pipelines, improving software release cycles.
+*   TechServe (2018 – 2021)
+    *   Administered Windows and Linux systems, ensuring system stability and security.
+    *   Performed application deployments, ensuring seamless integration with existing systems.
+
+EDUCATION
+*   B.E. Information Technology | 2018
+    *   University of [Insert University Name Here]
+
+SECTIONS
+*   ACHIEVEMENTS
+    *   Standardized infrastructure deployment with Terraform and Azure DevOps, resulting in a streamlined deployment process.
+    *   Implemented automated testing procedures to improve code quality.
+*   PROJECTS
+    *   Developed a self-service Azure environment provisioning platform.
+*   CERTIFICATIONS
+    *   None currently listed.
+*   INTERESTS
+    *   Cloud computing, DevOps, Automation, Infrastructure as Code.
+
+JOB DESCRIPTION:
+{}

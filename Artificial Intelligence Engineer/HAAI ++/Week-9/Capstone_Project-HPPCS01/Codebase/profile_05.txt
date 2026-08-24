@@ -1,0 +1,9 @@
+Candidate: Vikram Singh
+Contact: vikram.singh@example.com | Delhi NCR | +91-90000-10005
+AI/ML enthusiast and software engineer with 3 years of Python development experience.
+At DataForge (2023-present), built NLP preprocessing pipelines and Python microservices.
+At AppWorks (2021-2023), developed backend services and data utilities.
+Education: B.Tech CSE, 2021.
+Skills: Python, scikit-learn, Pandas, NumPy, NLP, FastAPI, Docker, Git.
+Achievements: Improved text classification F1 score from 0.71 to 0.82 through feature engineering.
+Project: Customer feedback sentiment classifier.

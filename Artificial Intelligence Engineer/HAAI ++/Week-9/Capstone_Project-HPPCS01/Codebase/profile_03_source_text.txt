@@ -1,0 +1,9 @@
+Candidate: Rohan Verma
+Email rohan.verma@example.com | Pune | +91-90000-10003
+Cloud/platform engineer with 6 years of experience supporting Azure environments and CI/CD.
+At CloudAxis (2021-present), manages Azure resources, Terraform deployments, monitoring and release pipelines.
+At TechServe (2018-2021), handled Windows/Linux administration and application deployments.
+Education: B.E. Information Technology, 2018.
+Skills: Azure, Terraform, Azure DevOps, GitHub Actions, Linux, Docker, Kubernetes, PowerShell.
+Achievements: Standardized infrastructure deployment with Terraform and reduced environment setup time by 60%.
+Project: Self-service Azure environment provisioning platform.

@@ -1,0 +1,6 @@
+{
+  "llm_1_qwen3": "Analyze the advertisement text and return a structured creative brief with product, target audience, marketing objective, emotional tone, visual concept, setting, lighting and composition.",
+  "llm_2_llama32": "Convert the creative brief into a detailed FLUX.1-schnell image prompt. Generate only the product/lifestyle visual; do not generate advertisement copy, logos, labels or typography.",
+  "image_model": "FLUX.1-schnell",
+  "post_processing": "Pillow replaces the visual placeholder with the generated product image while preserving the supplied template and exact advertisement copy."
+}

@@ -1,0 +1,1 @@
+python main.py --test_video ./test_video.mp4 --training_dir . --training_pattern "train_video*.mp4" --training_commentary ./training_commentary_example.txt --output ./commentary_output.json --window 5 --training_samples 3 --fps_sample 1 --llm1_url http://localhost:11434 --llm1_model gemma3:4b --llm2_url http://localhost:11434 --llm2_model llama3.2:3b

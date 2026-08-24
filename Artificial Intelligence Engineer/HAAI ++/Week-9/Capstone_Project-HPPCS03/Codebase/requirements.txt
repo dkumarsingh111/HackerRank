@@ -1,0 +1,8 @@
+Pillow>=10.0
+requests>=2.31
+torch>=2.2
+diffusers>=0.35
+transformers>=4.45
+accelerate>=0.30
+sentencepiece>=0.2
+safetensors>=0.4

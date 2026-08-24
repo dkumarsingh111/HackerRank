@@ -1,0 +1,34 @@
+{
+  "name": "Rohan Verma",
+  "contact": {
+    "email": "rohan.verma@example.com",
+    "phone": "+91-90000-10003",
+    "location": ""
+  },
+  "summary": "Cloud/platform engineer with 6 years of experience supporting Azure environments and CI/CD.",
+  "education": [
+    "degree: B.E. Information Technology | year: 2018"
+  ],
+  "experience": [
+    "company: CloudAxis | dates: 2021 - present | responsibilities: ['Manages Azure resources', 'Terraform deployments', 'Monitoring and release pipelines']",
+    "company: TechServe | dates: 2018 - 2021 | responsibilities: ['Handled Windows/Linux administration', 'Application deployments']"
+  ],
+  "skills": [
+    "Azure",
+    "Terraform",
+    "Azure DevOps",
+    "GitHub Actions",
+    "Linux",
+    "Docker",
+    "Kubernetes",
+    "PowerShell"
+  ],
+  "achievements": [
+    "Standardized infrastructure deployment with Terraform and reduced environment setup time by 60%"
+  ],
+  "projects": [
+    "Self-service Azure environment provisioning platform."
+  ],
+  "certifications": [],
+  "interests": []
+}

@@ -1,0 +1,8 @@
+Name: Neha Kapoor
+Email neha.kapoor@example.com | Hyderabad | +91-90000-10006
+Business analyst with 5 years of experience in requirements analysis, stakeholder management and process improvement.
+Works at FinOps Global since 2021; previously at ProcessPoint from 2019-2021.
+Education: MBA, 2019; B.Com, 2017.
+Skills: Business analysis, SQL, Power BI, Jira, Agile, requirements gathering, process mapping.
+Achievements: Improved reconciliation workflow and reduced turnaround time by 35%.
+Project: Finance operations dashboard and workflow redesign.

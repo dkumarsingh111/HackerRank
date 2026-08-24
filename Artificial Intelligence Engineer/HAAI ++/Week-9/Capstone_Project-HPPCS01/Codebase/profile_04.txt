@@ -1,0 +1,8 @@
+Name: Sneha Iyer
+Email: sneha.iyer@example.com
+Summary: QA automation engineer with 5 years of experience in Selenium, Python and API testing.
+Experience: TestPro, 2021-present; QualityBridge, 2019-2021.
+Education: B.Tech Electronics, 2019.
+Skills include Selenium, Python, Playwright, REST API testing, PyTest, SQL, Jenkins, Git.
+Achievements: Automated 70% of regression suite and reduced regression execution time by 55%.
+Project: Web and API automation framework with reusable test components.

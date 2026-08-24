@@ -1,0 +1,9 @@
+Name: Priya Menon
+Contact: priya.menon@example.com, +91-90000-10002, Chennai
+Profile: Data analyst with 3.5 years of experience turning business data into dashboards and actionable insights.
+Current employer: InsightWorks, 2023-present. Creates Power BI dashboards, SQL queries and monthly business reports.
+Previous: DataVista, 2021-2023, prepared Excel models and automated reporting.
+Education: B.Sc. Statistics, 2021.
+Skills: SQL, Power BI, Excel, Python, Pandas, data visualization.
+Achievements: Cut monthly reporting time from two days to four hours and created KPI dashboards used by sales leadership.
+Projects: Sales performance dashboard and customer churn analysis.
