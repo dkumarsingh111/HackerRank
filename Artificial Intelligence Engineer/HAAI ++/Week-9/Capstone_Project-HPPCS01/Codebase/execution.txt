@@ -7,13 +7,10 @@ HAAI++ Capstone HPPCS01 - Execution Instructions
 5. ollama serve
 6. python main.py --gemma-model gemma3:1b --llama-model llama3.2:1b
 
-Outputs:
-- Up to 10 final CV DOCX files
-- Up to 10 structured JSON files
-- Up to 10 review JSON files
-- Source-text and plain-text CV artifacts
-- evaluation_summary.json
+Optional job-description tailoring:
+python main.py --jd-file job_description.txt --gemma-model gemma3:1b --llama-model llama3.2:1b
 
-Optional:
-- Add --jd-file job_description.txt to tailor CVs against a target role
-- PDF CVs are generated automatically when LibreOffice is installed
+Optional user-review refinement:
+python main.py --jd-file job_description.txt --revision "Make the summary more concise using only existing experience."
+
+

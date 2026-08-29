@@ -1,9 +1,0 @@
-Candidate: Aditya Rao
-Email: aditya.rao@example.com | Mumbai | +91-90000-10007
-DevOps engineer with 4 years of experience in cloud deployment and automation.
-Current: DeployOps India, 2022-present. Builds CI/CD pipelines and manages containers.
-Previous: InfraWorks, 2020-2022.
-Education: B.E. Computer Engineering, 2020.
-Skills: AWS, Azure, Docker, Kubernetes, Jenkins, Terraform, Python, Bash.
-Achievements: Introduced automated deployment gates and reduced failed releases by 25%.
-Project: Containerized microservice deployment platform.
