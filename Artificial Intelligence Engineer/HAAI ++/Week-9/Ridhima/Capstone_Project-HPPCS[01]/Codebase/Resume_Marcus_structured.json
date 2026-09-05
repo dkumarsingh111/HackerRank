@@ -1,0 +1,32 @@
+{
+  "name": "Marcus Vance",
+  "contact": {
+    "email": "marcus.vance@email.com",
+    "phone": "555) 045-6712",
+    "location": "Austin, TX"
+  },
+  "summary": "Dedicated Construction Project Manager with 12+ years overseeing commercial building initiatives, infrastructure upgrades, and civil engineering projects.",
+  "education": [
+    "BS in Civil Engineering from Texas A&M University"
+  ],
+  "experience": [
+    "Directed the construction of a $18M mixed-use commercial complex, bringing the project in 3 weeks ahead of schedule and 5% under budget.",
+    "Regularly dealing with city officials, architects, and trade labor unions."
+  ],
+  "skills": [
+    "Negotiation",
+    "OSHA",
+    "Budgeting",
+    "Material Estimation",
+    "Procore",
+    "AutoCAD",
+    "Primavera P6",
+    "Excel"
+  ],
+  "achievements": [
+    "Zero-accident safety record across last five major jobsites"
+  ],
+  "projects": [
+    "Construction of a $18M mixed-use commercial complex"
+  ]
+}

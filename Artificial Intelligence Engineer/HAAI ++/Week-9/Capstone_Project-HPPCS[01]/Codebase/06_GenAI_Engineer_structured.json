@@ -1,0 +1,31 @@
+{
+  "name": "Sanjay Kumar",
+  "contact": {
+    "email": "sanjay.kumar@email.com",
+    "phone": "555-2106",
+    "location": ""
+  },
+  "summary": "Worked at GenAI Labs from 2023 to 2026 as a Generative AI Engineer. Developed applications using large language models, retrieval augmented generation, embeddings, and vector databases. Built a document question-answering assistant with PDF and Word document loading, embedding creation, retrieval, and grounded responses. Implemented prompt templates, conversation memory, metadata filtering, response evaluation, and guardrails.",
+  "education": [
+    "[B.Tech in Computer Science, 2021]"
+  ],
+  "experience": [
+    "{'title': 'Generative AI Engineer', 'company': 'GenAI Labs', 'dates': '2023 to 2026', 'description': 'Developed applications using large language models, retrieval augmented generation, embeddings, and vector databases.'}"
+  ],
+  "skills": [
+    "Python",
+    "FastAPI",
+    "Azure OpenAI",
+    "LangChain",
+    "LlamaIndex",
+    "PostgreSQL",
+    "Docker",
+    "Azure services"
+  ],
+  "achievements": [
+    "Built a document question-answering assistant"
+  ],
+  "projects": [
+    "Document question-answering assistant"
+  ]
+}

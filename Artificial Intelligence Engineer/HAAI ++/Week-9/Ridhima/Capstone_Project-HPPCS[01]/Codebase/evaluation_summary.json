@@ -1,0 +1,259 @@
+{
+  "project": "Capstone_Project-HPPCS01",
+  "models": {
+    "generation": "gemma3:1b",
+    "review": "llama3.2:1b"
+  },
+  "job_description": {
+    "job_title": "Senior Technical Project Manager",
+    "requirements": [
+      "Bachelor's degree in Computer Science, Management Information Systems, or a related technical field (or equivalent professional experience)",
+      "5–8 years of direct experience managing software development or IT infrastructure projects in an Agile environment",
+      "Proven track record of managing project budgets exceeding $2M+ and leading distributed or remote teams",
+      "Deep understanding of software engineering principles, CI/CD pipelines, DevOps workflows, and cloud architecture (AWS, Azure, or GCP)"
+    ],
+    "responsibilities": [
+      "Lead end-to-end delivery of complex software development, system integrations, and cloud migration initiatives.",
+      "Act as Scrum Master for multi-disciplinary sprint teams.",
+      "Serve as the primary liaison between technical staff, product managers, and executive leadership to align engineering output with business objectives.",
+      "Build and maintain detailed project plans, release roadmaps, and resource allocation trackers while proactively managing scope creep.",
+      "Identify technical bottlenecks, operational constraints, or security risks early.",
+      "Develop and execute concrete mitigation plans."
+    ],
+    "keywords": [
+      "software engineering",
+      "Agile",
+      "DevOps",
+      "cloud architecture",
+      "AWS",
+      "Azure",
+      "GCP",
+      "project management",
+      "Jira",
+      "Confluence",
+      "Monday.com",
+      "MS Project",
+      "PMP",
+      "CSM",
+      "problem solving",
+      "communication",
+      "leadership",
+      "technical architecture"
+    ]
+  },
+  "profiles_processed": 10,
+  "results": [
+    {
+      "input": "Resume_Aisha.docx",
+      "output_cv": "Resume_Aisha_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 67,
+      "jd_keyword_coverage": 67,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone number",
+        "Missing email address",
+        "Missing employer",
+        "Missing date of birth",
+        "Missing education",
+        "Missing skill",
+        "Missing achievement",
+        "Missing project",
+        "Missing job title",
+        "Missing skills",
+        "Missing keywords",
+        "Unsupported target-job keywords were added to the CV: Agile, DevOps, cloud architecture, AWS, Azure, GCP, problem solving, communication, leadership, technical architecture"
+      ]
+    },
+    {
+      "input": "Resume_Alex.docx",
+      "output_cv": "Resume_Alex_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 100,
+      "jd_keyword_coverage": 72,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone number",
+        "Missing email",
+        "Missing employer",
+        "Missing date",
+        "Missing education",
+        "Missing skill",
+        "Missing achievement",
+        "Missing project",
+        "Unsupported claim: 'Technical Project Manager' is a job title, not a skill",
+        "Unsupported claim: 'Scrum-mastering' is a job title, not a skill",
+        "Unsupported claim: 'Jira' is a tool, not a skill",
+        "Unsupported claim: 'Confluence' is a tool, not a skill",
+        "Unsupported claim: 'Asana' is a tool, not a skill",
+        "Unsupported claim: 'MS Project' is a tool, not a skill",
+        "Unsupported claim: 'Problem solving' is a skill, not a claim",
+        "Unsupported claim: 'Communication' is a skill, not a claim",
+        "Unsupported claim: 'Leadership' is a skill, not a claim",
+        "Unsupported claim: 'Technical architecture' is a skill, not a claim",
+        "Unsupported target-job keywords were added to the CV: problem solving, leadership, technical architecture",
+        "The generated CV contains bracketed placeholder content.",
+        "ACHIEVEMENTS section was added although the source has none.",
+        "PROJECTS section was added although the source has none."
+      ]
+    },
+    {
+      "input": "Resume_Chloe.docx",
+      "output_cv": "Resume_Chloe_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 100,
+      "jd_keyword_coverage": 94,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project that exists in SOURCE PROFILE",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills are not supported by SOURCE PROFILE",
+        "Target-job keyword is not a candidate skill unless SOURCE PROFILE supports it",
+        "Unsupported target-job keywords were added to the CV: software engineering, DevOps, cloud architecture, AWS, Azure, GCP, project management, Confluence, Monday.com, CSM",
+        "PROJECTS section was added although the source has none."
+      ]
+    },
+    {
+      "input": "Resume_David.docx",
+      "output_cv": "Resume_David_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 100,
+      "jd_keyword_coverage": 50,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project that exists in SOURCE PROFILE",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills",
+        "Empty sections or placeholders",
+        "Missing factual information in SOURCE PROFILE",
+        "Missing target-job keyword in SOURCE PROFILE",
+        "Unsupported target-job keywords were added to the CV: Agile, Jira, Confluence, Monday.com, CSM, leadership",
+        "ACHIEVEMENTS section was added although the source has none.",
+        "PROJECTS section was added although the source has none."
+      ]
+    },
+    {
+      "input": "Resume_Elena.docx",
+      "output_cv": "Resume_Elena_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 80,
+      "jd_keyword_coverage": 44,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone number",
+        "Missing email address",
+        "Missing employer",
+        "Missing date of birth",
+        "Missing education",
+        "Missing skill",
+        "Missing achievement",
+        "Missing project",
+        "Missing job title",
+        "Missing skills",
+        "Missing keyword",
+        "Unsupported claim: 'University of Illinois'",
+        "Source information was omitted or materially changed: phone: 555) 076-5432",
+        "Unsupported target-job keywords were added to the CV: problem solving, communication, leadership, technical architecture"
+      ]
+    },
+    {
+      "input": "Resume_James.docx",
+      "output_cv": "Resume_James_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 67,
+      "jd_keyword_coverage": 28,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing project management skills",
+        "Missing leadership skills",
+        "Missing communication skills",
+        "Missing problem solving skills",
+        "Missing technical architecture skills",
+        "Unsupported target-job keywords were added to the CV: leadership",
+        "ACHIEVEMENTS section was added although the source has none."
+      ]
+    },
+    {
+      "input": "Resume_Marcus.docx",
+      "output_cv": "Resume_Marcus_final_cv.docx",
+      "score": 80,
+      "keyword_coverage": 100,
+      "target_keyword_coverage": 100,
+      "jd_keyword_coverage": 100,
+      "factual_consistency": 0,
+      "format_score": 80,
+      "status": "REGENERATE",
+      "issues": [
+        "Independent reviewer unavailable: Model did not return a valid JSON object.",
+        "Unsupported target-job keywords were added to the CV: software engineering, Agile, DevOps, cloud architecture, AWS, Azure, GCP, project management, Jira, Confluence"
+      ]
+    },
+    {
+      "input": "Resume_Priya.docx",
+      "output_cv": "Resume_Priya_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 50,
+      "jd_keyword_coverage": 44,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project that exists in SOURCE PROFILE",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills are not supported by SOURCE PROFILE",
+        "Target-job keyword is not a candidate skill unless SOURCE PROFILE supports it",
+        "Source information was omitted or materially changed: phone: 555) 034-7761; education: {'degree': 'MBA from the University of Michigan'}",
+        "Unsupported target-job keywords were added to the CV: Agile, Jira, Confluence, Monday.com, PMP, CSM, leadership"
+      ]
+    },
+    {
+      "input": "Resume_Robert.docx",
+      "output_cv": "Resume_Robert_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 67,
+      "jd_keyword_coverage": 17,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Unsupported target-job keywords were added to the CV: communication",
+        "PROJECTS section was added although the source has none."
+      ]
+    },
+    {
+      "input": "Resume_Sarah.docx",
+      "output_cv": "Resume_Sarah_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 75,
+      "jd_keyword_coverage": 22,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project that exists in SOURCE PROFILE",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills are not supported by SOURCE PROFILE",
+        "A target-job keyword is not a candidate skill unless SOURCE PROFILE supports it",
+        "Unsupported target-job keywords were added to the CV: technical architecture",
+        "PROJECTS section was added although the source has none."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "project": "Capstone_Project-HPPCS01",
+  "models": {
+    "generation": "gemma3:1b",
+    "review": "llama3.2:1b"
+  },
+  "job_description": {
+    "job_title": "AI Engineer",
+    "requirements": [
+      "Strong proficiency in Python",
+      "Experience with PyTorch or TensorFlow",
+      "Experience with LangChain, LlamaIndex, or Hugging Face",
+      "Familiarity with vector databases (e.g., Pinecone, Chroma, Milvus)",
+      "Bachelor's degree in Computer Science, AI, or equivalent practical experience"
+    ],
+    "responsibilities": [
+      "Build Applications",
+      "Integrate Models",
+      "Optimize Performance",
+      "Manage Data"
+    ],
+    "keywords": [
+      "Machine Learning",
+      "Large Language Models (LLMs)",
+      "RAG",
+      "Agentic Systems",
+      "Vector Databases",
+      "PyTorch",
+      "TensorFlow",
+      "LangChain",
+      "LlamaIndex",
+      "Hugging Face"
+    ]
+  },
+  "profiles_processed": 10,
+  "results": [
+    {
+      "input": "01_Azure_Administrator.docx",
+      "output_cv": "01_Azure_Administrator_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 50,
+      "jd_keyword_coverage": 10,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone number",
+        "Missing email",
+        "Missing employer",
+        "Missing date of birth",
+        "Missing education",
+        "Missing skill",
+        "Missing achievement",
+        "Missing project",
+        "Unsupported claim: 'I graduated with a B.Tech in Computer Science in 2019'"
+      ]
+    },
+    {
+      "input": "02_Data_Scientist.docx",
+      "output_cv": "02_Data_Scientist_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 100,
+      "jd_keyword_coverage": 10,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project that exists in SOURCE PROFILE",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills are an issue",
+        "Target-job keyword is not a candidate skill unless SOURCE PROFILE supports it",
+        "Empty sections or placeholders are an issue",
+        "Source information was omitted or materially changed: email: priya.mehta@email.com; phone: 555-2102; experience: {'title': 'Data Analyst', 'company': 'InsightWorks', 'dates': '2020 to 2022', 'description': 'Prepared reports and dashboards.'}",
+        "ACHIEVEMENTS section was added although the source has none."
+      ]
+    },
+    {
+      "input": "03_Data_Analyst.docx",
+      "output_cv": "03_Data_Analyst_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 0,
+      "jd_keyword_coverage": 0,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project that exists in SOURCE PROFILE",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills are an issue",
+        "A target-job keyword is not a candidate skill unless SOURCE PROFILE supports it",
+        "Empty sections or placeholders are an issue",
+        "Source information was omitted or materially changed: education: {'degree': 'B.Com', 'year': '2019'}"
+      ]
+    },
+    {
+      "input": "04_AI_Engineer.docx",
+      "output_cv": "04_AI_Engineer_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 100,
+      "jd_keyword_coverage": 60,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills",
+        "Empty sections or placeholders",
+        "Missing factual information in SOURCE PROFILE",
+        "Unsupported claims in TARGET JOB DESCRIPTION",
+        "Unsupported target-job keywords were added to the CV: RAG, Agentic Systems"
+      ]
+    },
+    {
+      "input": "05_Prompt_Engineer.docx",
+      "output_cv": "05_Prompt_Engineer_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 100,
+      "jd_keyword_coverage": 60,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills",
+        "Empty sections or placeholders",
+        "Unsupported claims: 'Arjun Malhotra' is a placeholder for a name, not a candidate skill",
+        "Unsupported keyword: 'Prompt Engineering' is not a candidate skill unless SOURCE PROFILE supports it",
+        "Source information was omitted or materially changed: phone: 555-2105; skill: Few-Shot Examples; skill: Structured JSON Outputs; skill: Function Calling",
+        "Unsupported target-job keywords were added to the CV: RAG, Vector Databases, LangChain, LlamaIndex, Hugging Face",
+        "The generated CV contains bracketed placeholder content.",
+        "ACHIEVEMENTS section was added although the source has none."
+      ]
+    },
+    {
+      "input": "06_GenAI_Engineer.docx",
+      "output_cv": "06_GenAI_Engineer_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 100,
+      "jd_keyword_coverage": 100,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone number and email address in SOURCE PROFILE",
+        "Unsupported achievement 'Built a document question-answering assistant' in TARGET JOB DESCRIPTION",
+        "Unsupported claim 'Familiarity with vector databases (e.g., Pinecone, Chroma, Milvus)' in TARGET JOB DESCRIPTION",
+        "Unsupported claim 'Strong proficiency in Python' in TARGET JOB DESCRIPTION",
+        "Unsupported target-job keywords were added to the CV: Machine Learning, Agentic Systems, PyTorch, TensorFlow, Hugging Face",
+        "The generated CV contains bracketed placeholder content."
+      ]
+    },
+    {
+      "input": "07_Machine_Learning_Engineer.pdf",
+      "output_cv": "07_Machine_Learning_Engineer_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 100,
+      "jd_keyword_coverage": 100,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills",
+        "Target-job keyword not a candidate skill unless SOURCE PROFILE supports it",
+        "Source information was omitted or materially changed: education: {'degree': 'B.Tech in Computer Engineering', 'year': '2019'}",
+        "Unsupported target-job keywords were added to the CV: Large Language Models (LLMs), RAG, Agentic Systems, Vector Databases, TensorFlow, LangChain, LlamaIndex, Hugging Face",
+        "ACHIEVEMENTS section was added although the source has none."
+      ]
+    },
+    {
+      "input": "08_DevOps_Engineer.pdf",
+      "output_cv": "08_DevOps_Engineer_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 0,
+      "jd_keyword_coverage": 0,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project that exists in SOURCE PROFILE",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills are an issue",
+        "Target-job keyword is not a candidate skill unless SOURCE PROFILE supports it",
+        "Empty sections or placeholders are an issue",
+        "Source information was omitted or materially changed: skill: Windows",
+        "ACHIEVEMENTS section was added although the source has none.",
+        "PROJECTS section was added although the source has none."
+      ]
+    },
+    {
+      "input": "09_Cloud_Engineer.pdf",
+      "output_cv": "09_Cloud_Engineer_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 100,
+      "jd_keyword_coverage": 10,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project that exists in SOURCE PROFILE",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills are an issue",
+        "A target-job keyword is not a candidate skill unless SOURCE PROFILE supports it",
+        "Empty sections or placeholders are an issue",
+        "Source information was omitted or materially changed: phone: 555-2109",
+        "The generated CV contains bracketed placeholder content."
+      ]
+    },
+    {
+      "input": "10_sales_executive.pdf",
+      "output_cv": "10_sales_executive_final_cv.docx",
+      "score": 0,
+      "keyword_coverage": 0,
+      "target_keyword_coverage": 0,
+      "jd_keyword_coverage": 0,
+      "factual_consistency": 0,
+      "format_score": 0,
+      "status": "REGENERATE",
+      "issues": [
+        "Missing phone, email, employer, date, education, skill, achievement or project that exists in SOURCE PROFILE",
+        "Unsupported achievements, metrics, responsibilities, job titles or skills are an issue",
+        "A target-job keyword is not a candidate skill unless SOURCE PROFILE supports it",
+        "Empty sections or placeholders are an issue",
+        "Source information was omitted or materially changed: education: {'institution': 'Central High School', 'degree': 'High School'}",
+        "ACHIEVEMENTS section was added although the source has none.",
+        "PROJECTS section was added although the source has none."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Alex Mercer",
+  "contact": {
+    "email": "alex.mercer@email.com",
+    "phone": "555) 019-2834",
+    "location": ""
+  },
+  "summary": "Technical Project Manager with over eight years of experience leading cross-functional teams in software development and cloud migration.",
+  "education": [
+    "{'degree': 'Bachelor of Science in Computer Science', 'university': 'Ohio State University'}"
+  ],
+  "experience": [
+    "{'title': 'Technical Project Manager', 'company': 'CloudScale Tech', 'dates': 'Past', 'description': 'Managed a portfolio of enterprise software projects valued at $4M, successfully migrating 15 legacy systems to AWS while reducing infrastructure costs by 22%.'}"
+  ],
+  "skills": [
+    "Agile",
+    "Scrum-mastering",
+    "Jira",
+    "Confluence",
+    "Asana",
+    "MS Project"
+  ],
+  "achievements": [],
+  "projects": []
+}

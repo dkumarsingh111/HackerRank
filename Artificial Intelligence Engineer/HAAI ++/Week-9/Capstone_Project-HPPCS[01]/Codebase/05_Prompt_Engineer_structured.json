@@ -1,0 +1,30 @@
+{
+  "name": "Arjun Malhotra",
+  "contact": {
+    "email": "arjun.malhotra@email.com",
+    "phone": "555-2105",
+    "location": ""
+  },
+  "summary": "Worked at IntelligentApps as a Prompt Engineer, designing, testing, and optimizing prompts for large language model applications. Created prompts for summarization, classification, information extraction, question answering, content generation, and conversational assistants. Collaborated with product and engineering teams to improve response quality, reduce hallucinations, and create reusable prompt patterns. Built prompt evaluation scripts using Python and developed test cases for accuracy, relevance, consistency, and safety. Before that, worked at DigitalLabs as a Python Automation Engineer. Graduated with a B.Tech in Information Technology in 2021.",
+  "education": [
+    "[B.Tech in Information Technology, 2021]"
+  ],
+  "experience": [
+    "{'title': 'Prompt Engineer', 'company': 'IntelligentApps', 'dates': '2023 to 2026', 'description': 'Designed, tested, and optimized prompts for large language model applications.'}"
+  ],
+  "skills": [
+    "Prompt Engineering",
+    "Large Language Models",
+    "OpenAI Models",
+    "Few-Shot Examples",
+    "Structured JSON Outputs",
+    "Function Calling",
+    "Evaluation Datasets",
+    "Python",
+    "Prompt Evaluation Scripts"
+  ],
+  "achievements": [],
+  "projects": [
+    "Prompt Evaluation Scripts (Python)"
+  ]
+}

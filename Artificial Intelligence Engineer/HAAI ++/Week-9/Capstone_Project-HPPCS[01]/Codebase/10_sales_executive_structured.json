@@ -1,0 +1,23 @@
+{
+  "name": "John Doe",
+  "contact": {
+    "email": "john@email.com",
+    "phone": "555-1234",
+    "location": ""
+  },
+  "summary": "Worked at ABC Corp from 2020 to 2022 as a sales guy, handling client interactions, phone answering, coffee preparation, and product sales. Previously worked at XYZ Store from 2018 as a cash register worker, floor cleaner, and night security guard.",
+  "education": [
+    "{'institution': 'Central High School', 'degree': 'High School'}"
+  ],
+  "experience": [
+    "{'company': 'ABC Corp', 'dates': '2020 - 2022', 'description': 'Handled client interactions, answered phones, made coffee, sold products, and updated the computer system.'}",
+    "{'company': 'XYZ Store', 'dates': '2018', 'description': 'Cash register worker, floor cleaner, and night security guard.'}"
+  ],
+  "skills": [
+    "Talking",
+    "Microsoft Word",
+    "Being on time"
+  ],
+  "achievements": [],
+  "projects": []
+}

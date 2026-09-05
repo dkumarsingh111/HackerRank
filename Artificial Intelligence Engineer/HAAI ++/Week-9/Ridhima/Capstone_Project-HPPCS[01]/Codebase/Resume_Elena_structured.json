@@ -1,0 +1,29 @@
+{
+  "name": "Elena Rostova",
+  "contact": {
+    "email": "elena.rostova@email.com",
+    "phone": "555) 076-5432",
+    "location": ""
+  },
+  "summary": "Agile Delivery Manager / IT Project Manager with 6 years of experience driving mobile application development and e-commerce platform optimizations.",
+  "education": [
+    "{'degree': \"Bachelor's in Management Information Systems\", 'university': 'University of Illinois'}"
+  ],
+  "experience": [
+    "{'title': 'Agile Project Manager and Delivery Lead', 'company': 'FinTech Pulse', 'dates': '2019-Present', 'description': 'Coordinated three concurrent distributed teams across different time zones to launch a peer-to-peer payment app that achieved 1 million downloads in its first quarter. Involved facilitating daily standups, removing blockers, managing product backlogs in Jira, and translating product roadmaps into actionable user stories.'}"
+  ],
+  "skills": [
+    "Scrum",
+    "SAFe",
+    "Agile Project Management",
+    "Product Backlog Management",
+    "Jira",
+    "Product Roadmapping"
+  ],
+  "achievements": [
+    "Achieved 1 million downloads in the first quarter of a peer-to-peer payment app."
+  ],
+  "projects": [
+    "Peer-to-peer payment app launch"
+  ]
+}

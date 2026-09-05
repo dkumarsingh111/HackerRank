@@ -1,8 +1,0 @@
-Name: Ananya Joshi
-Contact: ananya.joshi@example.com | Jaipur | +91-90000-10010
-Technical writer and documentation specialist with 4 years of experience creating developer documentation and knowledge bases.
-At DocuLabs since 2022; previously at TechWrite from 2020-2022.
-Education: BA English, 2020.
-Skills: Technical writing, Markdown, Git, API documentation, information architecture, Confluence.
-Achievements: Reorganized a large knowledge base and improved article findability.
-Project: REST API documentation portal.

@@ -1,0 +1,28 @@
+{
+  "job_title": "AI Engineer",
+  "requirements": [
+    "Strong proficiency in Python",
+    "Experience with PyTorch or TensorFlow",
+    "Experience with LangChain, LlamaIndex, or Hugging Face",
+    "Familiarity with vector databases (e.g., Pinecone, Chroma, Milvus)",
+    "Bachelor's degree in Computer Science, AI, or equivalent practical experience"
+  ],
+  "responsibilities": [
+    "Build Applications",
+    "Integrate Models",
+    "Optimize Performance",
+    "Manage Data"
+  ],
+  "keywords": [
+    "machine learning",
+    "large language models (LLMs)",
+    "RAG",
+    "agentic systems",
+    "vector databases",
+    "PyTorch",
+    "TensorFlow",
+    "LangChain",
+    "LlamaIndex",
+    "Hugging Face"
+  ]
+}

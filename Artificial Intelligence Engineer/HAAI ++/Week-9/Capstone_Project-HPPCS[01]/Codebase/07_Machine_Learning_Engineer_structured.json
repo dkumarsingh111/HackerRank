@@ -1,0 +1,31 @@
+{
+  "name": "Riya Singh",
+  "contact": {
+    "email": "riya.singh@email.com",
+    "phone": "555-2107",
+    "location": ""
+  },
+  "summary": "Machine Learning Engineer at MLSystems from 2021 to 2025, developing machine learning models and production pipelines for business applications. Used Python, Scikit-learn, PyTorch, Pandas, NumPy, MLflow, Docker, and Git.",
+  "education": [
+    "{'degree': 'B.Tech in Computer Engineering', 'year': '2019'}"
+  ],
+  "experience": [
+    "{'company': 'MLSystems', 'title': 'Machine Learning Engineer', 'start_date': '2021', 'end_date': '2025', 'description': 'Developed machine learning models and production pipelines for business applications. Used Python, Scikit-learn, PyTorch, Pandas, NumPy, MLflow, Docker, and Git.'}",
+    "{'company': 'TechData', 'title': 'Software Engineer', 'start_date': '2019', 'end_date': '2021', 'description': 'Developed Python applications and APIs.'}"
+  ],
+  "skills": [
+    "Python",
+    "Scikit-learn",
+    "PyTorch",
+    "Pandas",
+    "NumPy",
+    "MLflow",
+    "Docker",
+    "Git"
+  ],
+  "achievements": [],
+  "projects": [
+    "Automated model training pipelines",
+    "Model performance monitoring"
+  ]
+}
