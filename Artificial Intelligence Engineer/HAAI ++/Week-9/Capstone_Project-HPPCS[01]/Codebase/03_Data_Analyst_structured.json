@@ -1,0 +1,30 @@
+{
+  "name": "Amit Verma",
+  "contact": {
+    "email": "amit.verma@email.com",
+    "phone": "555-2103",
+    "location": ""
+  },
+  "summary": "Worked at RetailPro as a Data Analyst from 2021 to 2025, collecting and analyzing sales, customer, inventory, and operational data. Used SQL, Excel, Power BI, and Python to clean datasets, create reports, build dashboards, and identify business trends. Created Power BI dashboards for sales performance, monthly revenue, product performance, and customer behavior.",
+  "education": [
+    "{'degree': 'B.Com', 'year': '2019'}",
+    "{'certification': 'Data Analytics', 'year': '2019'}"
+  ],
+  "experience": [
+    "{'company': 'RetailPro', 'title': 'Data Analyst', 'start_date': '2021', 'end_date': '2025', 'description': 'Collected and analyzed sales, customer, inventory, and operational data. Used SQL, Excel, Power BI, and Python to clean datasets, create reports, build dashboards, and identify business trends.'}"
+  ],
+  "skills": [
+    "SQL",
+    "Excel",
+    "Power BI",
+    "Python",
+    "Data Analysis",
+    "Reporting"
+  ],
+  "achievements": [
+    "Created Power BI dashboards for sales performance, monthly revenue, product performance, and customer behavior."
+  ],
+  "projects": [
+    "Created Power BI dashboards for sales performance, monthly revenue, product performance, and customer behavior."
+  ]
+}

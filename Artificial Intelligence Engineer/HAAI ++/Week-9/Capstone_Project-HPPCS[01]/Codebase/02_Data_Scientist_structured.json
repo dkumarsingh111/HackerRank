@@ -1,0 +1,35 @@
+{
+  "name": "Priya Mehta",
+  "contact": {
+    "email": "priya.mehta@email.com",
+    "phone": "555-2102",
+    "location": ""
+  },
+  "summary": "Worked at DataVision Analytics from 2022 to 2025 as a Data Scientist. Analyzed business data, built machine learning models, performed exploratory data analysis, and developed predictive solutions using Python, Pandas, NumPy, Scikit-learn, Matplotlib, and SQL.",
+  "education": [
+    "[M.Sc. in Statistics] 2020"
+  ],
+  "experience": [
+    "{'title': 'Data Scientist', 'company': 'DataVision Analytics', 'dates': '2022 to 2025', 'description': 'Analyzed business data, built machine learning models, performed exploratory data analysis, and developed predictive solutions using Python, Pandas, NumPy, Scikit-learn, Matplotlib, and SQL.'}",
+    "{'title': 'Data Analyst', 'company': 'InsightWorks', 'dates': '2020 to 2022', 'description': 'Prepared reports and dashboards.'}"
+  ],
+  "skills": [
+    "Python",
+    "Pandas",
+    "NumPy",
+    "Scikit-learn",
+    "Matplotlib",
+    "SQL",
+    "Regression",
+    "Classification",
+    "Clustering",
+    "Random Forests",
+    "Gradient Boosting"
+  ],
+  "achievements": [],
+  "projects": [
+    "Customer churn prediction",
+    "Sales forecasting",
+    "Customer segmentation"
+  ]
+}

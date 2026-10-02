@@ -1,0 +1,38 @@
+{
+  "project": "HPPCS[05] Sports Commentator from Video",
+  "input": {
+    "training_videos": [
+      "train_video1.mp4",
+      "train_video2.mp4",
+      "train_video3.mp4"
+    ],
+    "test_video": "test_video.mp4"
+  },
+  "models": {
+    "llm_1": "gemma3:4b",
+    "llm_2": "llama3.2:3b",
+    "roles": {
+      "llm_1": "vision-based sports event understanding",
+      "llm_2": "sports commentary generation"
+    }
+  },
+  "timeline_commentary": [
+    {
+      "segment_id": 1,
+      "start_time": "00:00:00.000",
+      "end_time": "00:00:05.000",
+      "sport": "unknown",
+      "event": "Example observable sports action.",
+      "players": [],
+      "score": "",
+      "game_context": "",
+      "visual_evidence": [
+        "Example visual cue"
+      ],
+      "event_confidence": 0.8,
+      "commentary": "The action is building as the players move into position.",
+      "tone": "excited",
+      "commentary_confidence": 0.84
+    }
+  ]
+}

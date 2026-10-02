@@ -1,0 +1,37 @@
+{
+  "name": "Deepak Singh",
+  "contact": {
+    "email": "Deepak.singh@email.com",
+    "phone": "555-2101",
+    "location": "Mirzapur, UP"
+  },
+  "summary": "Worked at CloudTech Solutions from 2021 to 2025 as an Azure Administrator.",
+  "education": [
+    "B.Tech in Computer Science in 2019"
+  ],
+  "experience": [
+    "{'company': 'CloudTech Solutions', 'title': 'Azure Administrator', 'dates': '2021 to 2025'}"
+  ],
+  "skills": [
+    "Azure",
+    "Automation",
+    "Virtual Machines",
+    "Storage Accounts",
+    "Virtual Networks",
+    "NSGs",
+    "Azure Active Directory",
+    "Backups",
+    "Monitoring",
+    "RBAC",
+    "Compute",
+    "Networking",
+    "Access"
+  ],
+  "achievements": [
+    "Managed Azure virtual machines",
+    "Created and maintained resource groups",
+    "Configured RBAC permissions",
+    "Handled incidents related to compute, networking, and access"
+  ],
+  "projects": []
+}

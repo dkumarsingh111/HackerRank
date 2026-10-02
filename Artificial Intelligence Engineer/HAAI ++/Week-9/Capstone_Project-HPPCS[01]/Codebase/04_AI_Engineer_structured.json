@@ -1,0 +1,32 @@
+{
+  "name": "Neha Kapoor",
+  "contact": {
+    "email": "neha.kapoor@email.com",
+    "phone": "555-2104",
+    "location": ""
+  },
+  "summary": "Worked at AIWorks Technologies from 2022 to 2026 as an AI Engineer. Developed and deployed machine learning and artificial intelligence applications using Python.",
+  "education": [
+    "[B.Tech in Computer Science]",
+    "2020"
+  ],
+  "experience": [
+    "{'title': 'AI Engineer', 'company': 'AIWorks Technologies', 'dates': '2022 to 2026', 'description': 'Developed and deployed machine learning and artificial intelligence applications using Python.'}"
+  ],
+  "skills": [
+    "Python",
+    "FastAPI",
+    "PyTorch",
+    "Scikit-learn",
+    "LangChain",
+    "REST APIs",
+    "Docker",
+    "Azure"
+  ],
+  "achievements": [
+    "Developed an intelligent document processing application that extracted information from resumes and generated structured candidate profiles."
+  ],
+  "projects": [
+    "Text classification, semantic search, embeddings, and model evaluation"
+  ]
+}

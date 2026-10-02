@@ -1,0 +1,952 @@
+{
+  "project": "HPPCS[05] Sports Commentator from Video",
+  "input": {
+    "training_videos": [
+      "train_video1.mp4",
+      "train_video2.mp4",
+      "train_video3.mp4"
+    ],
+    "test_video": "test_video.mp4",
+    "test_video_metadata": {
+      "filename": "test_video.mp4",
+      "fps": 50.0,
+      "frame_count": 8087,
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 161.74
+    }
+  },
+  "training_reference": {
+    "training_video_count": 3,
+    "training_videos": [
+      "train_video1.mp4",
+      "train_video2.mp4",
+      "train_video3.mp4"
+    ],
+    "reference_events": [
+      {
+        "sport": "cricket",
+        "event": "observable event",
+        "visual_cues": [
+          "Round The Wicket logo",
+          "blue background",
+          "red text"
+        ],
+        "commentary_style": "static image with branding",
+        "confidence": 0.95,
+        "source_video": "train_video1.mp4",
+        "source_start": "00:00:00.000",
+        "source_end": "00:00:05.000"
+      },
+      {
+        "sport": "cricket",
+        "event": "observable event",
+        "visual_cues": [
+          "wicket",
+          "batsman",
+          "bowler",
+          "pitch"
+        ],
+        "commentary_style": "showing a cricket play with a batsman being dismissed",
+        "confidence": 0.95,
+        "source_video": "train_video1.mp4",
+        "source_start": "00:02:50.000",
+        "source_end": "00:02:55.000"
+      },
+      {
+        "sport": "unknown",
+        "event": "observable event",
+        "visual_cues": [
+          "blue background",
+          "red subscribe text",
+          "dark blue bar"
+        ],
+        "commentary_style": "transition between screen elements",
+        "confidence": 0.8,
+        "source_video": "train_video1.mp4",
+        "source_start": "00:05:40.000",
+        "source_end": "00:05:45.000"
+      },
+      {
+        "sport": "football",
+        "event": "observable event",
+        "visual_cues": [
+          "players on a football field",
+          "football",
+          "advertising banners"
+        ],
+        "commentary_style": "scene description",
+        "confidence": 0.95,
+        "source_video": "train_video2.mp4",
+        "source_start": "00:00:00.000",
+        "source_end": "00:00:05.000"
+      },
+      {
+        "sport": "football",
+        "event": "observable event",
+        "visual_cues": [
+          "Cristiano Ronaldo wearing a Manchester United jersey",
+          "Cristiano Ronaldo's jersey with the number 7",
+          "The word 'CR7' on Ronaldo's jersey",
+          "A crowd of people in the background"
+        ],
+        "commentary_style": "The image shows Cristiano Ronaldo in a Manchester United jersey with the number 7, alongside the 'CR7' moniker.",
+        "confidence": 0.95,
+        "source_video": "train_video2.mp4",
+        "source_start": "00:01:46.370",
+        "source_end": "00:01:51.370"
+      },
+      {
+        "sport": "other",
+        "event": "observable event",
+        "visual_cues": [
+          "Shoushaa Production logo"
+        ],
+        "commentary_style": "logo display",
+        "confidence": 0.95,
+        "source_video": "train_video2.mp4",
+        "source_start": "00:03:32.740",
+        "source_end": "00:03:37.740"
+      },
+      {
+        "sport": "kabaddi",
+        "event": "game play",
+        "visual_cues": [
+          "players in action",
+          "court markings",
+          "sponsor logos",
+          "stage lighting"
+        ],
+        "commentary_style": "descriptive",
+        "confidence": 0.95,
+        "source_video": "train_video3.mp4",
+        "source_start": "00:00:00.000",
+        "source_end": "00:00:05.000"
+      },
+      {
+        "sport": "kabaddi",
+        "event": "game play",
+        "visual_cues": [
+          "players in action",
+          "crowd reaction"
+        ],
+        "commentary_style": "observational",
+        "confidence": 0.95,
+        "source_video": "train_video3.mp4",
+        "source_start": "00:06:26.020",
+        "source_end": "00:06:31.020"
+      },
+      {
+        "sport": "kabaddi",
+        "event": "celebration",
+        "visual_cues": [
+          "Haryana Steelers celebrating with trophies",
+          "PKL 11 displayed",
+          "Celebratory fans"
+        ],
+        "commentary_style": "capturing the moment of victory",
+        "confidence": 0.95,
+        "source_video": "train_video3.mp4",
+        "source_start": "00:12:52.040",
+        "source_end": "00:12:57.040"
+      }
+    ],
+    "commentary_reference_available": true
+  },
+  "models": {
+    "llm_1": "gemma3:4b",
+    "llm_2": "llama3.2:3b",
+    "roles": {
+      "llm_1": "vision-based sports event understanding",
+      "llm_2": "sports commentary generation"
+    }
+  },
+  "timeline_commentary": [
+    {
+      "segment_id": 1,
+      "start_time": "00:00:00.000",
+      "end_time": "00:00:05.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Gill",
+        "Starc"
+      ],
+      "score": "0-0-0-0",
+      "game_context": "Test match",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "We're live at the Test match, and the action is about to unfold! The Round The Wicket logo is on screen, and the blue background is set for a thrilling match.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 2,
+      "start_time": "00:00:05.000",
+      "end_time": "00:00:10.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Gill",
+        "Starc"
+      ],
+      "score": "0-0",
+      "game_context": "IND vs AUS",
+      "visual_evidence": [
+        "Round The Wicket logo",
+        "blue background",
+        "red text"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "We're live at the Round The Wicket logo, where India is facing off against Australia in a thrilling match, and the score is currently 0-0.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 3,
+      "start_time": "00:00:10.000",
+      "end_time": "00:00:15.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Gill",
+        "Starc"
+      ],
+      "score": "IND 0-6",
+      "game_context": "Test match",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "A wicket falls, and India is now at 0-6 in this Test match, with Rohit and Gill facing a tough challenge against Starc's bowling.",
+      "tone": "neutral",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 4,
+      "start_time": "00:00:15.000",
+      "end_time": "00:00:20.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Gill"
+      ],
+      "score": "IND 0-6",
+      "game_context": "Cricket match - India vs. Australia",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "India's batsman Gill is facing a wicket, and the score is IND 0-6 in this crucial match against Australia.",
+      "tone": "neutral",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 5,
+      "start_time": "00:00:20.000",
+      "end_time": "00:00:25.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Gill",
+        "Starc"
+      ],
+      "score": "Rohit 12, Gill 8, Starc 0-16 2.5",
+      "game_context": "India vs Australia - Target 237, Overs 4.5, India need 219 runs from 271 balls",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit and Gill are off to a strong start, but Starc is putting pressure on with 0-16 2.5, India need 219 runs from 271 balls now!",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 6,
+      "start_time": "00:00:25.000",
+      "end_time": "00:00:30.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Gill",
+        "Starc",
+        "Ellis"
+      ],
+      "score": "IND 0-18",
+      "game_context": "India vs Australia - Target 237. India need 219 runs from 271 balls. Gill is batting.",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Gill is facing a tough challenge, needing 219 runs from 271 balls to keep India in the game.",
+      "tone": "neutral",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 7,
+      "start_time": "00:00:30.000",
+      "end_time": "00:00:35.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Gill",
+        "Ellis"
+      ],
+      "score": "IND 0-43",
+      "game_context": "This Over: 136.7 111.1 134.7 (KM/H)",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "India's batsmen are struggling to cope with the pace and spin of the opposition, as Rohit and Gill fall to dismissals, leaving the team on 0-43.",
+      "tone": "dramatic",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 8,
+      "start_time": "00:00:35.000",
+      "end_time": "00:00:40.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Gill",
+        "Hazlewood"
+      ],
+      "score": "Rohit 25, Gill 10",
+      "game_context": "India need 189 runs from 250 balls. Australia 0-3.2",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit and Gill are in the middle of a heated exchange, with Hazlewood waiting for his next opportunity to strike!",
+      "tone": "excited",
+      "commentary_confidence": 0.92
+    },
+    {
+      "segment_id": 9,
+      "start_time": "00:00:40.000",
+      "end_time": "00:00:45.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Gill",
+        "Hazlewood"
+      ],
+      "score": "0-48",
+      "game_context": "India vs Australia - Test Match",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "A wicket falls, and Australia takes control with a score of 48 runs ahead of India in this Test Match.",
+      "tone": "neutral",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 10,
+      "start_time": "00:00:45.000",
+      "end_time": "00:00:50.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Kohli",
+        "Zampa"
+      ],
+      "score": "1-83",
+      "game_context": "IND vs AUS - Live Cricket Match",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "A wicket falls for India, with Rohit's bat flying out of his hands, as Zampa's delivery takes its toll! The Australian bowler is on fire!",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 11,
+      "start_time": "00:00:50.000",
+      "end_time": "00:00:55.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Kohli"
+      ],
+      "score": "Rohit 49, Kohli 62",
+      "game_context": "IND 1-118, AUS 0-27",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Kohli takes a crucial wicket, sending Rohit Sharma back to the pavilion! India trails by 90 runs on the board.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 12,
+      "start_time": "00:00:55.000",
+      "end_time": "00:01:00.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Kohli"
+      ],
+      "score": "1-118",
+      "game_context": "IND vs AUS - Live Cricket Match",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "A wicket falls, and Rohit Sharma is out for 118 runs! Kohli is on the crease now.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 13,
+      "start_time": "00:01:00.000",
+      "end_time": "00:01:05.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Kohli"
+      ],
+      "score": "Rohit 50 e3, Kohli 30 35",
+      "game_context": "IND 1-119, Target 237 Overs 20.4, Partnership 50 (62)",
+      "visual_evidence": [
+        "Round The Wicket logo",
+        "blue background",
+        "red text",
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit Sharma and Kohli are in the middle of a crucial partnership, with Rohit scoring 50 runs off just three balls, while Kohli adds 30 runs with 35 balls faced.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 14,
+      "start_time": "00:01:05.000",
+      "end_time": "00:01:10.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Kohli"
+      ],
+      "score": "Rohit 55, Kohli 36",
+      "game_context": "India vs Australia - Target 237, 130/1 in 22.5 overs",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit Sharma takes a wicket, dismissing the Australian batsman, while Kohli looks to score more runs for India.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 15,
+      "start_time": "00:01:10.000",
+      "end_time": "00:01:15.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Kohli",
+        "Zampa",
+        "Ellis"
+      ],
+      "score": "Rohit 65, Kohli 79",
+      "game_context": "India vs Australia - Cricket match. India is batting, Australia is bowling.",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch",
+        "Round The Wicket logo",
+        "blue background",
+        "red text",
+        "blue background",
+        "red subscribe text",
+        "dark blue bar"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit and Kohli are making steady progress for India, with Rohit on 65 and Kohli on 79, as Australia's bowlers look to take control of the match.",
+      "tone": "neutral",
+      "commentary_confidence": 0.92
+    },
+    {
+      "segment_id": 16,
+      "start_time": "00:01:15.000",
+      "end_time": "00:01:20.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Kohli",
+        "Ellis"
+      ],
+      "score": "Rohit 65, Kohli 46",
+      "game_context": "IND 1-152, AUS 0-43",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit and Kohli are in the middle of a heated battle at the crease, with Rohit scoring 65 and Kohli 46 for India, who are now at 152, while Australia struggles at 43.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 17,
+      "start_time": "00:01:20.000",
+      "end_time": "00:01:25.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Kohli"
+      ],
+      "score": "Rohit 70, Kohli 46",
+      "game_context": "India vs Australia - Test Match",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit Sharma takes a wicket, dismissing Kohli for 46, as the crowd watches in suspense!",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 18,
+      "start_time": "00:01:25.000",
+      "end_time": "00:01:30.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Kohli"
+      ],
+      "score": "Rohit 70 b1, Kohli 46 50",
+      "game_context": "India vs Australia",
+      "visual_evidence": [
+        "bet365 logo",
+        " রোহিত",
+        "कोहली",
+        "wicket",
+        "batsman",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit and Kohli are in the middle of a heated exchange, with Rohit on 70 and Kohli on 46, as the India vs Australia match heats up!",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 19,
+      "start_time": "00:01:30.000",
+      "end_time": "00:01:35.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Kohli"
+      ],
+      "score": "Rohit 78, Kohli 52",
+      "game_context": "India need 66 runs from 132 balls",
+      "visual_evidence": [
+        "Round The Wicket logo",
+        "blue background",
+        "red text"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "India need 66 runs from 132 balls to take the lead, with Rohit and Kohli at the helm.",
+      "tone": "neutral",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 20,
+      "start_time": "00:01:35.000",
+      "end_time": "00:01:40.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Kohli",
+        "Zampa"
+      ],
+      "score": "Rohit 78, Kohli 52",
+      "game_context": "India vs Australia - Target 237, India need 66 runs from 132 balls",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit and Kohli are in a tight spot, needing 66 runs from 132 balls to reach their target!",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 21,
+      "start_time": "00:01:40.000",
+      "end_time": "00:01:45.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Kohli",
+        "Connolly"
+      ],
+      "score": "Rohit 84, Kohli 53",
+      "game_context": "India vs Australia, target 237, India need 59 runs from 125 balls",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit and Kohli are in a tight spot, needing 59 runs from 125 balls to reach their target of 237 against Australia.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 22,
+      "start_time": "00:01:45.000",
+      "end_time": "00:01:50.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Kohli",
+        "Conolly"
+      ],
+      "score": "Rohit 91, Kohli 54",
+      "game_context": "India vs Australia - Target 237, India need 51 runs from 111 balls",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit Sharma is looking to accelerate India's chase as he faces off against Australia's bowlers, needing just 51 runs to reach their target of 237.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 23,
+      "start_time": "00:01:50.000",
+      "end_time": "00:01:55.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Kohli",
+        "Zampa",
+        "unknown"
+      ],
+      "score": "India 1-186",
+      "game_context": "India vs Australia, cricket match. Rohit Sharma and Kohli are batting.",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit Sharma and Kohli are facing a wicket, India's score stands at 186 runs.",
+      "tone": "neutral",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 24,
+      "start_time": "00:01:55.000",
+      "end_time": "00:02:00.000",
+      "sport": "cricket",
+      "event": "game play",
+      "players": [
+        "Rohit Sharma",
+        "Kohli"
+      ],
+      "score": "1-200",
+      "game_context": "India need 38 runs from 102 balls. Rohit Sharma is batting at 100 and Kohli at 59.",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit Sharma is in a dominant position, needing just 38 runs to take India to a comfortable victory, while Virat Kohli provides a steady support at the other end.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 25,
+      "start_time": "00:02:00.000",
+      "end_time": "00:02:05.000",
+      "sport": "unknown",
+      "event": "High-motion sports action is visible.",
+      "players": [],
+      "score": "",
+      "game_context": "",
+      "visual_evidence": [],
+      "event_confidence": 0.35,
+      "commentary": "It's a fast-paced action sequence, with players in motion.",
+      "tone": "excited",
+      "commentary_confidence": 0.35
+    },
+    {
+      "segment_id": 26,
+      "start_time": "00:02:05.000",
+      "end_time": "00:02:10.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Kohli",
+        "unknown",
+        "unknown"
+      ],
+      "score": "India 1-200, Rohit 100, Kohli 59",
+      "game_context": "India vs Australia cricket match. India is batting first. Rohit Sharma is batting and Kohli is in the field.",
+      "visual_evidence": [
+        "batsman",
+        "bowler",
+        "pitch",
+        "blue background",
+        "red text"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit Sharma is off to a strong start, scoring 100 runs for India, while Kohli watches closely from the field.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 27,
+      "start_time": "00:02:10.000",
+      "end_time": "00:02:15.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Kohli"
+      ],
+      "score": "India need 37 runs from 102 balls",
+      "game_context": "IND v AUS - ODI",
+      "visual_evidence": [
+        "Round The Wicket logo",
+        "blue background",
+        "red text"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "India need 37 runs from 102 balls to stay in the match, with Rohit Sharma and Kohli leading the charge.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 28,
+      "start_time": "00:02:15.000",
+      "end_time": "00:02:20.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Kohli"
+      ],
+      "score": "Rohit 103, Kohli 62",
+      "game_context": "India vs Australia - Target 237, India need 30 runs from 87 balls",
+      "visual_evidence": [
+        "Round The Wicket logo",
+        "blue background",
+        "red text",
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit and Kohli are in the middle of a crucial 30-run chase for India, with the target of 237 looming large!",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 29,
+      "start_time": "00:02:20.000",
+      "end_time": "00:02:25.000",
+      "sport": "cricket",
+      "event": "showing a cricket play with a batsman being dismissed",
+      "players": [
+        "Rohit Sharma",
+        "Kohli"
+      ],
+      "score": "India need 30 runs from 87 balls",
+      "game_context": "India vs Australia cricket match",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit Sharma's wicket has fallen, India now require 30 runs from 87 balls to stay in the match!",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 30,
+      "start_time": "00:02:25.000",
+      "end_time": "00:02:30.000",
+      "sport": "cricket",
+      "event": "game play",
+      "players": [
+        "Rohit",
+        "Kohli"
+      ],
+      "score": "1-219",
+      "game_context": "IND vs AUS",
+      "visual_evidence": [
+        "Round The Wicket logo",
+        "blue background",
+        "red text",
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit and Kohli are in the middle of a heated game play, with India trailing behind Australia by 218 runs.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 31,
+      "start_time": "00:02:30.000",
+      "end_time": "00:02:35.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Kohli"
+      ],
+      "score": "1-122s",
+      "game_context": "India vs Australia - Cricket match",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "A wicket falls, and Rohit Sharma is out for 122s! Kohli is on fire!",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 32,
+      "start_time": "00:02:35.000",
+      "end_time": "00:02:40.000",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit",
+        "Kohli"
+      ],
+      "score": "1-225",
+      "game_context": "India need 12 runs from 75 balls",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "India's batsmen, Rohit and Kohli, are in a precarious position, needing 12 runs from just 75 balls to avoid a major setback.",
+      "tone": "excited",
+      "commentary_confidence": 0.95
+    },
+    {
+      "segment_id": 33,
+      "start_time": "00:02:40.000",
+      "end_time": "00:02:41.740",
+      "sport": "cricket",
+      "event": "observable event",
+      "players": [
+        "Rohit Sharma",
+        "Kohli"
+      ],
+      "score": "IND 1-225",
+      "game_context": "India vs Australia - India is batting, Rohit Sharma and Kohli are the current batsmen.",
+      "visual_evidence": [
+        "wicket",
+        "batsman",
+        "bowler",
+        "pitch"
+      ],
+      "event_confidence": 0.95,
+      "commentary": "Rohit Sharma and Kohli are facing a wicket, India's batting is under pressure at 1-225.",
+      "tone": "neutral",
+      "commentary_confidence": 0.95
+    }
+  ]
+}

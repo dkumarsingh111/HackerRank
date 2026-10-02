@@ -1,0 +1,34 @@
+{
+  "name": "Karan Gupta",
+  "contact": {
+    "email": "karan.gupta@email.com",
+    "phone": "555-2109",
+    "location": ""
+  },
+  "summary": "Cloud Engineer at CloudFirst Technologies from 2021 to 2026.",
+  "education": [
+    "[B.Tech in Information Technology] in 2019"
+  ],
+  "experience": [
+    "{'company': 'CloudFirst Technologies', 'title': 'Cloud Engineer', 'dates': '2021 to 2026', 'description': 'Designed, implemented, and supported cloud infrastructure on Azure and AWS.'}"
+  ],
+  "skills": [
+    "Terraform",
+    "PowerShell",
+    "Azure Virtual Network",
+    "Azure Load Balancer",
+    "Azure Storage",
+    "Azure Monitor",
+    "IAM",
+    "Load Balancing",
+    "Databases",
+    "Containers",
+    "Backup Solutions"
+  ],
+  "achievements": [
+    "Cloud Migration Projects"
+  ],
+  "projects": [
+    "Cloud Infrastructure Automation"
+  ]
+}

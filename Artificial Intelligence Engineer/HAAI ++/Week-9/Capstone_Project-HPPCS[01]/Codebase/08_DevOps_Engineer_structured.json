@@ -1,0 +1,28 @@
+{
+  "name": "Vikram Patel",
+  "contact": {
+    "email": "vikram.patel@email.com",
+    "phone": "555-2108",
+    "location": ""
+  },
+  "summary": "DevOps Engineer at DevCloud Systems from 2020 to 2025, responsible for designing and maintaining CI/CD pipelines, cloud infrastructure, and automation of application deployments.",
+  "education": [
+    "[B.Tech in Computer Science] 2018"
+  ],
+  "experience": [
+    "{'company': 'DevCloud Systems', 'title': 'DevOps Engineer', 'dates': '2020 to 2025', 'description': 'Designed and maintained CI/CD pipelines, cloud infrastructure, and automated application deployments.'}"
+  ],
+  "skills": [
+    "Azure",
+    "Terraform",
+    "Kubernetes",
+    "Docker",
+    "Git",
+    "Windows",
+    "Linux",
+    "YAML pipelines",
+    "CI/CD"
+  ],
+  "achievements": [],
+  "projects": []
+}
